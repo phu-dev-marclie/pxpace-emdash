@@ -1,0 +1,125 @@
+---
+import Base from '../../layouts/PlainBase.astro';
+import DocsLayout from '../../layouts/DocsLayout.astro';
+import DocsSidebar from '../../components/DocsSidebar.astro';
+import DocsMenuButton from '../../components/DocsMenuButton.astro';
+import DocsSearchBox from '../../components/DocsSearchBox.astro';
+import DocsCopyPage from '../../components/DocsCopyPage.astro';
+import ThemeToggle from '../../components/ThemeToggle.astro';
+import Chip from '../../components/Chip.astro';
+import DocsShareBar from '../../components/DocsShareBar.astro';
+import DocsCallout from '../../components/DocsCallout.astro';
+import DocsFigure from '../../components/DocsFigure.astro';
+import DocsSteps from '../../components/DocsSteps.astro';
+import DocsCodeBlock from '../../components/DocsCodeBlock.astro';
+import DocsPager from '../../components/DocsPager.astro';
+import DocsOnThisPage from '../../components/DocsOnThisPage.astro';
+import DocsAskAI from '../../components/DocsAskAI.astro';
+import DocsCTACard from '../../components/DocsCTACard.astro';
+import DocsSearchDialog from '../../components/DocsSearchDialog.astro';
+import '../../styles/generated/framework.css';
+import '../../styles/generated/global.css';
+import '../../styles/generated/pages/docs/quick-start.css';
+---
+<Base title="Quick Start: Set Up Your First Server and Site" siteName="PXpace" lang="en">
+  <Fragment slot="head">
+    <link rel="icon" href="/brand/favicon.png" type="image/png" />
+    <meta property="og:locale" content="en" />
+    <meta name="author" content="PXpace" />
+    <script is:inline src="/scripts/snippets/snip-theme-mode-restore.js"></script>
+  </Fragment>
+  <DocsLayout>
+    <section class="w-docs-article" builder-data-element="section" data-surface="default" data-brx="section">
+      <div class="w-docs-article__container" builder-data-element="container" data-brx="container">
+        <DocsSidebar list={"\n<li class=\"w-docs-nav-group__item\"><a class=\"w-docs-nav-group__link\" href=\"#\">Introduction</a></li>\n<li class=\"w-docs-nav-group__item\"><a aria-current=\"page\" class=\"w-docs-nav-group__link is-current\" href=\"/docs/quick-start\">First Server &amp; Site</a></li>\n<li class=\"w-docs-nav-group__item\"><a class=\"w-docs-nav-group__link\" href=\"#\">Create a Site</a></li>\n<li class=\"w-docs-nav-group__item\"><a class=\"w-docs-nav-group__link\" href=\"#\">Demo Site</a></li>\n<li class=\"w-docs-nav-group__item\"><a class=\"w-docs-nav-group__link\" href=\"#\">DNS Records</a></li>\n<li class=\"w-docs-nav-group__item\"><a class=\"w-docs-nav-group__link w-docs-nav-group__link--all\" href=\"#\">All 6 Quick Start docs</a></li>\n"} />
+        <article class="w-docs-article__main" builder-data-element="flex" data-brx="block">
+          <div class="w-docs-article__topbar" builder-data-element="div" data-brx="div">
+            <DocsMenuButton />
+            <nav class="w-docs-article__crumbs" builder-data-element="div" aria-label="Breadcrumb">
+              <ol class="w-docs-article__crumbs-list" builder-data-element="list">
+                <li class="w-docs-article__crumb" builder-data-element="text">
+                  <a class="w-docs-article__crumb-link" builder-data-element="link" href="/docs">Docs</a>
+                  <svg class="w-docs-article__crumb-separator" builder-data-element="svg" aria-hidden="true" viewBox="0 0 14 14"><path d="M5 3l4 4-4 4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"></path></svg>
+                </li>
+                <li class="w-docs-article__crumb" builder-data-element="text">
+                  <a class="w-docs-article__crumb-link" builder-data-element="link" href="#">Quick Start</a>
+                  <svg class="w-docs-article__crumb-separator" builder-data-element="svg" aria-hidden="true" viewBox="0 0 14 14"><path d="M5 3l4 4-4 4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"></path></svg>
+                </li>
+                <li class="w-docs-article__crumb" builder-data-element="text">
+                  <span class="w-docs-article__crumb-current" builder-data-element="span" aria-current="page">Set Up Your First Server and Site</span>
+                </li>
+              </ol>
+            </nav>
+            <div class="w-docs-article__topbar-search" builder-data-element="div" data-brx="div">
+              <DocsSearchBox label="Search docs" />
+            </div>
+            <DocsCopyPage />
+            <ThemeToggle />
+          </div>
+          <div class="w-docs-article__body" builder-data-element="flex" data-brx="block">
+            <header class="w-docs-article__header" builder-data-element="flex" data-brx="block">
+              <Chip label="Quick Start" />
+              <h1 class="w-heading-l" builder-data-element="heading" data-docs-title="">
+                Set Up Your First Server and{' '}
+                <span class="w-highlight" builder-data-element="span">Site</span>
+              </h1>
+              <p class="w-docs-article__meta" builder-data-element="text">
+                <span class="w-docs-article__meta-item" builder-data-element="span">Updated Nov 14, 2026</span>
+                <span class="w-docs-article__meta-dot" builder-data-element="span" aria-hidden="true"></span>
+                <span class="w-docs-article__meta-item" builder-data-element="span">4 min read</span>
+              </p>
+            </header>
+            <DocsShareBar />
+            <div class="w-docs-article__prose" builder-data-element="div" data-prose="">
+              <p builder-data-element="text">With <a href="#">PXpace</a> you can set up your first server and site without writing any code. PXpace provisions the server, installs an optimized stack and keeps it updated, so you can focus on building sites instead of running infrastructure. Follow these steps to get started.</p>
+              <DocsCallout variant="w-docs-callout--tip" icon={"<path d=\"M7.75 14.25h4.5M8.5 16.75h3M10 3.25a4.75 4.75 0 0 0-2.75 8.6c.4.3.6.75.6 1.25v.15h4.3v-.15c0-.5.2-.95.6-1.25A4.75 4.75 0 0 0 10 3.25Z\" fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\"></path>"} title="Before you start" text="You only need an email address. The self-managed plan includes 1 server and 10 sites for free; a payment method is needed for managed servers." />
+              <h2 builder-data-element="heading" id="sign-up">Step 1: Sign Up for PXpace</h2>
+              <p builder-data-element="text">Open <a href="#">app.pxpace.com</a> and create an account with your name, email and a secure password. Confirm your email from the message we send you, and you land on the dashboard.</p>
+              <DocsFigure content={"\n<div class=\"w-mock__bar\"><span class=\"w-mock__dots\"><span class=\"w-mock__dot\"></span><span class=\"w-mock__dot w-mock__dot--yellow\"></span><span class=\"w-mock__dot w-mock__dot--green\"></span></span><span class=\"w-mock__title\">app.pxpace.com — Create your account</span></div>\n<div class=\"w-mock__row\"><span class=\"w-mock__icon\"></span><span class=\"w-mock__name\">Full name<span class=\"w-mock__meta\">Jane Cooper</span></span></div>\n<div class=\"w-mock__row\"><span class=\"w-mock__icon\"></span><span class=\"w-mock__name\">Email<span class=\"w-mock__meta\">jane@studio.dev</span></span><span class=\"w-pill w-pill--success\">Verified</span></div>\n<div class=\"w-mock__row\"><span class=\"w-mock__icon\"></span><span class=\"w-mock__name\">Password<span class=\"w-mock__meta\">••••••••••••••</span></span><span class=\"w-pill w-pill--success\">Strong</span></div>\n<div class=\"w-mock__row\"><span class=\"w-chip\">Create account</span><span class=\"w-mock__skeleton w-mock__skeleton--long\"></span></div>\n"} caption="Fig. 1 — The sign-up screen" />
+              <h2 builder-data-element="heading" id="create-server">Step 2: Create Your First Server</h2>
+              <p builder-data-element="text">From the dashboard, start a new server. PXpace walks you through four short choices:</p>
+              <DocsSteps />
+              <DocsFigure content={"\n<div class=\"w-mock__bar\"><span class=\"w-mock__dots\"><span class=\"w-mock__dot\"></span><span class=\"w-mock__dot w-mock__dot--yellow\"></span><span class=\"w-mock__dot w-mock__dot--green\"></span></span><span class=\"w-mock__title\">New server — Choose a provider</span></div>\n<div class=\"w-mock__row\"><span class=\"w-mock__icon\"></span><span class=\"w-mock__name\">PXpace Managed<span class=\"w-mock__meta\">Fully managed, from $5/month</span></span><span class=\"w-pill w-pill--success\">Recommended</span></div>\n<div class=\"w-mock__row\"><span class=\"w-mock__icon\"></span><span class=\"w-mock__name\">Vultr<span class=\"w-mock__meta\">1 account connected</span></span><span class=\"w-pill w-pill--success\">Connected</span></div>\n<div class=\"w-mock__row\"><span class=\"w-mock__icon\"></span><span class=\"w-mock__name\">DigitalOcean<span class=\"w-mock__meta\">API token required</span></span><span class=\"w-pill w-pill--warning\">Connect</span></div>\n<div class=\"w-mock__row\"><span class=\"w-mock__icon\"></span><span class=\"w-mock__name\">Any Ubuntu server<span class=\"w-mock__meta\">Ubuntu 22.04 or 24.04, fresh install</span></span><span class=\"w-mock__tab\">Run 1 command</span></div>\n"} caption="Fig. 2 — Choosing where the server runs" />
+              <h2 builder-data-element="heading" id="server-details">Step 3: Add Server Details</h2>
+              <p builder-data-element="text">Give the server a <strong>name</strong> you will recognise, pick the <strong>plan</strong> (CPU, RAM, storage) and the <strong>region</strong>. The root database password is generated for you; copy it to your password manager before you continue.</p>
+              <h3 builder-data-element="heading" id="database-engine">Database engine</h3>
+              <ul builder-data-element="list">
+                <li builder-data-element="text"><strong>MySQL 8.0</strong> — the default, best for most WordPress sites.</li>
+                <li builder-data-element="text"><strong>MariaDB 10.11</strong> — a drop-in alternative with lower memory use.</li>
+                <li builder-data-element="text">Need PostgreSQL? Add it later from <a href="#">Server → Databases</a>.</li>
+              </ul>
+              <DocsCallout variant="w-docs-callout--warning" icon={"<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\"><path d=\"M8.7 3.9a1.5 1.5 0 0 1 2.6 0l5.6 9.8a1.5 1.5 0 0 1-1.3 2.25H4.4a1.5 1.5 0 0 1-1.3-2.25L8.7 3.9Z\"></path><path d=\"M10 8v3\"></path></g><circle cx=\"10\" cy=\"13.4\" fill=\"currentColor\" r=\".9\"></circle>"} title="Save the root password" text="It is shown once. You can reset it later, but sites that use it will lose their database connection until you update them." />
+              <p builder-data-element="text">Once the server shows <code>Provisioned</code>, you can connect over SSH with the sudo user PXpace created:</p>
+              <DocsCodeBlock language="bash" filename="Your terminal" code={"<code class=\"w-docs-code__code\"><span class=\"w-docs-code__comment\"># connect as the sudo user (key added in Server → SSH Keys)</span>\n<span class=\"w-docs-code__prompt\" data-code-prompt=\"\">$ </span>ssh pxpace@203.0.113.24\n<span class=\"w-docs-code__prompt\" data-code-prompt=\"\">$ </span>sudo systemctl status nginx mysql --no-pager\n<span class=\"w-docs-code__prompt\" data-code-prompt=\"\">$ </span>echo <span class=\"w-docs-code__string\">\"server is ready\"</span></code>"} />
+              <h2 builder-data-element="heading" id="next-site">Next: Create Your First Site</h2>
+              <p builder-data-element="text">Your server is live. Site creation starts from the app catalogue: choose <strong>WordPress</strong> first and PXpace lists the servers that can run it, including the one you just created.</p>
+              <ul builder-data-element="list">
+                <li builder-data-element="text">
+                  <a builder-data-element="link" href="#">How to create your first WordPress site</a>
+                </li>
+                <li builder-data-element="text">
+                  <a builder-data-element="link" href="#">Create a demo site on a temporary domain</a>
+                </li>
+              </ul>
+              <h2 builder-data-element="heading" id="verify">Verify the Server</h2>
+              <ul builder-data-element="list">
+                <li builder-data-element="text">The server shows as <strong>Connected</strong> and <strong>Provisioned</strong> under Servers.</li>
+                <li builder-data-element="text">Plan, region and database engine match what you selected.</li>
+                <li builder-data-element="text"><strong>New Site</strong> on the server opens the app catalogue.</li>
+              </ul>
+              <p builder-data-element="text">Stuck on provisioning? See <a href="#">Server stuck provisioning</a> for the checks and the Retry button, or press <kbd>?</kbd> in the dashboard to reach support.</p>
+            </div>
+            <DocsPager prevTitle="Introduction" nextTitle="Create a Site" />
+          </div>
+        </article>
+        <aside class="w-docs-article__rail" builder-data-element="flex" data-brx="block">
+          <DocsOnThisPage />
+          <DocsAskAI />
+          <DocsCTACard title={"Ready to <span class=\"w-highlight\">deploy?</span>"} text="Launch your site or app on PXpace in minutes." />
+        </aside>
+        <DocsSearchDialog results={"\n<li class=\"w-docs-search-dialog__result\"><a class=\"w-docs-search-dialog__hit\" data-docs-search-hit=\"\" href=\"/docs/quick-start\"><span class=\"w-docs-search-dialog__hit-category\">Quick Start</span><span class=\"w-docs-search-dialog__hit-title\">Set Up Your First Server and Site</span><span class=\"w-docs-search-dialog__hit-excerpt\">Sign up, pick a provider and plan, and get a managed server online in about ten minutes.</span></a></li>\n<li class=\"w-docs-search-dialog__result\"><a class=\"w-docs-search-dialog__hit\" data-docs-search-hit=\"\" href=\"#\"><span class=\"w-docs-search-dialog__hit-category\">Sites</span><span class=\"w-docs-search-dialog__hit-title\">Create a Staging Environment</span><span class=\"w-docs-search-dialog__hit-excerpt\">Clone a live site to a staging domain, test changes, then push them back in one click.</span></a></li>\n<li class=\"w-docs-search-dialog__result\"><a class=\"w-docs-search-dialog__hit\" data-docs-search-hit=\"\" href=\"#\"><span class=\"w-docs-search-dialog__hit-category\">Sites</span><span class=\"w-docs-search-dialog__hit-title\">Install a Free SSL Certificate</span><span class=\"w-docs-search-dialog__hit-excerpt\">Let's Encrypt certificates are issued and renewed automatically for every domain.</span></a></li>\n<li class=\"w-docs-search-dialog__result\"><a class=\"w-docs-search-dialog__hit\" data-docs-search-hit=\"\" href=\"#\"><span class=\"w-docs-search-dialog__hit-category\">Servers</span><span class=\"w-docs-search-dialog__hit-title\">Add a Custom Cron Job</span><span class=\"w-docs-search-dialog__hit-excerpt\">Schedule any command per site or per server, with the output kept in the server log.</span></a></li>\n<li class=\"w-docs-search-dialog__result\"><a class=\"w-docs-search-dialog__hit\" data-docs-search-hit=\"\" href=\"#\"><span class=\"w-docs-search-dialog__hit-category\">Migration</span><span class=\"w-docs-search-dialog__hit-title\">Migrate Sites from cPanel</span><span class=\"w-docs-search-dialog__hit-excerpt\">Move files, databases and email settings from any cPanel host without downtime.</span></a></li>\n<li class=\"w-docs-search-dialog__result\"><a class=\"w-docs-search-dialog__hit\" data-docs-search-hit=\"\" href=\"#\"><span class=\"w-docs-search-dialog__hit-category\">Developer Tools</span><span class=\"w-docs-search-dialog__hit-title\">Create an API Token</span><span class=\"w-docs-search-dialog__hit-excerpt\">Generate scoped tokens for the public API, the CLI and MCP clients.</span></a></li>\n"} />
+      </div>
+    </section>
+  </DocsLayout>
+  <script is:inline src="/scripts/snippets/snip-pxpace-site-behaviour.js"></script>
+</Base>

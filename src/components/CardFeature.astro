@@ -1,0 +1,23 @@
+---
+import MockWindow from './MockWindow.astro';
+interface Props {
+  link?: string;
+  title?: string;
+  description?: string;
+  mockVariant?: string;
+  content?: string;
+}
+const { link = "#", title = "Updates Manager", description = "Every plugin, theme and core update across all your sites and servers, in one list. No separate maintenance tool, no maintenance plugin on each site and no per-site fee. Included in PRO.", mockVariant = "", content = "\n<div class=\"w-mock__bar\"><span class=\"w-mock__dots\"><span class=\"w-mock__dot\"></span><span class=\"w-mock__dot w-mock__dot--yellow\"></span><span class=\"w-mock__dot w-mock__dot--green\"></span></span><span class=\"w-mock__title\">Updates Manager</span></div>\n<div class=\"w-mock__row\"><span class=\"w-chip\">Plugins 24</span><span class=\"w-mock__tab\">Themes 6</span><span class=\"w-mock__tab\">WordPress Core 3</span></div>\n<div class=\"w-mock__row\"><span class=\"w-mock__icon\"></span><span class=\"w-mock__name\">WooCommerce<span class=\"w-mock__meta\">8 Sites</span></span><span class=\"w-pill w-pill--success\">Update Available</span></div>\n<div class=\"w-mock__row\"><span class=\"w-mock__icon\"></span><span class=\"w-mock__name\">Yoast SEO<span class=\"w-mock__meta\">4 Sites</span></span><span class=\"w-pill w-pill--success\">Update Available</span></div>\n<div class=\"w-mock__row\"><span class=\"w-mock__icon\"></span><span class=\"w-mock__name\">Elementor Pro<span class=\"w-mock__meta\">2 Sites</span></span><span class=\"w-pill w-pill--warning\">Licence needed</span></div>\n<div class=\"w-mock__row\"><span class=\"w-mock__icon\"></span><span class=\"w-mock__name\">Page Builder<span class=\"w-mock__meta\">Needs PHP 8.1</span></span><span class=\"w-pill w-pill--warning\">Not compatible</span></div>\n" } = Astro.props;
+---
+<a class="w-card-feature" builder-data-element="link" href={link}>
+  <div class="w-card-feature__head" builder-data-element="div">
+    <h3 class="w-card-feature__title" builder-data-element="heading">{title}</h3>
+    <p class="w-card-feature__description" builder-data-element="text">{description}</p>
+  </div>
+  <div class="w-card-feature__slot" builder-data-element="div">
+    <div class={`w-card-feature__mock ${mockVariant}`} builder-data-element="div">
+      <MockWindow content={content} />
+    </div>
+  </div>
+  <svg class="w-card-feature__arrow" builder-data-element="svg" aria-hidden="true" viewBox="0 0 18 18"><path d="M6.75 4.5 11.25 9l-4.5 4.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg>
+</a>

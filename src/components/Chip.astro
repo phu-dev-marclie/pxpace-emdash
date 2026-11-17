@@ -1,0 +1,7 @@
+---
+interface Props {
+  label?: string;
+}
+const { label = "Safe updates" } = Astro.props;
+---
+<span class="w-chip" builder-data-element="span">{label}</span>

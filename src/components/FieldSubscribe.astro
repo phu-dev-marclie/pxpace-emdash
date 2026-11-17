@@ -1,0 +1,10 @@
+---
+interface Props {
+  label?: string;
+}
+const { label = "Subscribe" } = Astro.props;
+---
+<form class="w-field w-field--dark" builder-data-element="form">
+  <input class="w-field__input" builder-data-element="form-input" aria-label="Email address" placeholder="Your Email Address" type="email" />
+  <button class="w-field__button" builder-data-element="button" type="submit">{label}</button>
+</form>

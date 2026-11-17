@@ -1,0 +1,26 @@
+---
+import SiterealRichText from './sitereal/RichText.astro';
+interface Props {
+  label?: string;
+  content?: string;
+  hintId?: string;
+  hint?: string;
+  errorId?: string;
+  error?: string;
+}
+const { label = "Site name", content = "\n<svg aria-hidden=\"true\" class=\"w-input__icon\" viewbox=\"0 0 18 18\"><g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.4\"><circle cx=\"9\" cy=\"9\" r=\"7\"></circle><path d=\"M2 9h14M9 2c1.9 2.1 2.8 4.4 2.8 7S10.9 13.9 9 16c-1.9-2.1-2.8-4.4-2.8-7S7.1 4.1 9 2Z\"></path></g></svg>\n<input aria-describedby=\"f-site-hint f-site-error\" autocomplete=\"off\" class=\"w-input__field\" id=\"f-site\" minlength=\"3\" name=\"site\" pattern=\"[a-z0-9\\-]+\" placeholder=\"my-store\" required=\"\" spellcheck=\"false\" type=\"text\"/>\n<button aria-label=\"Clear\" class=\"w-input__clear\" data-field-clear=\"\" tabindex=\"-1\" type=\"button\"><svg aria-hidden=\"true\" class=\"w-input__clear-icon\" viewbox=\"0 0 12 12\"><path d=\"M3 3l6 6M9 3 3 9\" fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-width=\"1.5\"></path></svg></button>\n<svg aria-hidden=\"true\" class=\"w-input__status\" viewbox=\"0 0 18 18\"><circle class=\"w-input__status-ring\" cx=\"9\" cy=\"9\" r=\"7.25\"></circle><path class=\"w-input__status-tick\" d=\"M6 9.2l2 2 4-4.2\"></path></svg>\n", hintId = "f-site-hint", hint = "Lowercase, used for your temporary URL.", errorId = "f-site-error", error = "3+ characters: lowercase letters, numbers, dashes." } = Astro.props;
+---
+<div class="w-form-field" builder-data-element="div" data-field="">
+  <label class="w-form-field__label" builder-data-element="form-label" for="f-site">
+    <span class="w-form-field__label-text" builder-data-element="span">{label}</span>
+    <slot />
+  </label>
+  <div class="w-input" builder-data-element="rich-text" data-field-control=""><SiterealRichText html={content} /></div>
+  <div class="w-form-field__footer" builder-data-element="div">
+    <p class="w-form-field__hint" builder-data-element="text" id={hintId}>{hint}</p>
+    <p class="w-form-field__error" builder-data-element="text" id={errorId}>
+      <svg class="w-form-field__error-icon" builder-data-element="svg" aria-hidden="true" viewBox="0 0 14 14"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.3"><circle cx="7" cy="7" r="6"></circle><path d="M7 4v3.5"></path></g><circle cx="7" cy="10" fill="currentColor" r=".75"></circle></svg>
+      <span class="w-form-field__error-text" builder-data-element="span">{error}</span>
+    </p>
+  </div>
+</div>

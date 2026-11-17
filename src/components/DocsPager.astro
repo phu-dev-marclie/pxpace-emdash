@@ -1,0 +1,20 @@
+---
+interface Props {
+  prevTitle?: string;
+  nextTitle?: string;
+}
+const { prevTitle = "Introduction", nextTitle = "Create a Site" } = Astro.props;
+---
+<nav class="w-docs-pager" builder-data-element="div" aria-label="Previous and next doc">
+  <a class="w-docs-pager__link w-docs-pager__link--prev" builder-data-element="link" href="#">
+    <span class="w-docs-pager__label" builder-data-element="span"><svg aria-hidden="true" class="w-docs-pager__icon w-docs-pager__icon--prev" viewbox="0 0 14 14"><path d="M5 3l4 4-4 4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"></path></svg>Previous</span>
+    <span class="w-docs-pager__title" builder-data-element="span">{prevTitle}</span>
+  </a>
+  <a class="w-docs-pager__link w-docs-pager__link--next" builder-data-element="link" href="#">
+    <span class="w-docs-pager__label" builder-data-element="span">
+      Next
+      <svg class="w-docs-pager__icon" builder-data-element="svg" aria-hidden="true" viewbox="0 0 14 14"><path d="M5 3l4 4-4 4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"></path></svg>
+    </span>
+    <span class="w-docs-pager__title" builder-data-element="span">{nextTitle}</span>
+  </a>
+</nav>

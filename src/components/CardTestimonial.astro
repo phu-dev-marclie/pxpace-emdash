@@ -1,0 +1,17 @@
+---
+interface Props {
+  quote?: string;
+  avatar?: string;
+  name?: string;
+}
+const { quote = "I've tried many paid platforms and the platform that works best for WordPress is SpinupWP and I believe that PXpace can reach and surpass that development, its roadmap is promising.\n\nCongratulations to the PXpace team, I hope they become the leading platform in the segment.", avatar = "https://xcloud.host/_landing/testimonials/brian.webp", name = "Brian Geovanny" } = Astro.props;
+---
+<article class="w-card-testimonial" builder-data-element="div">
+  <p class="w-card-testimonial__quote" builder-data-element="text">{quote}</p>
+  <div class="w-card-testimonial__author" builder-data-element="div">
+    <span class="w-card-testimonial__avatar" builder-data-element="span">
+      <img class="w-card-testimonial__avatar-image" builder-data-element="image" alt="" src={avatar} />
+    </span>
+    <span class="w-card-testimonial__name" builder-data-element="span">{name}</span>
+  </div>
+</article>

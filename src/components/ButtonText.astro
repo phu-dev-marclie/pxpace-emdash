@@ -1,0 +1,16 @@
+---
+interface Props {
+  link?: string;
+  label?: string;
+  showIcon?: boolean;
+}
+const { link = "#", label = "View all features", showIcon = true } = Astro.props;
+---
+<a class="w-button-text" builder-data-element="link" href={link}>
+  <span class="w-button-text__label" builder-data-element="span">{label}</span>
+  {(showIcon) && (
+    <>
+      <svg class="w-button-text__icon" builder-data-element="svg" aria-hidden="true" viewBox="0 0 14 14"><path d="M5 3l4 4-4 4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"></path></svg>
+    </>
+  )}
+</a>

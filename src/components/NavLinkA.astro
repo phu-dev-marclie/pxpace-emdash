@@ -1,0 +1,11 @@
+---
+interface Props {
+  link?: string;
+  ariaCurrent?: string;
+  label?: string;
+}
+const { link = "#", ariaCurrent = "", label = "Pricing" } = Astro.props;
+---
+<a class="w-nav-link" builder-data-element="link" href={link} aria-current={ariaCurrent}>
+  <span class="w-nav-link__label" builder-data-element="span">{label}</span>
+</a>

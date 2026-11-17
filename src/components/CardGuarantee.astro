@@ -1,0 +1,18 @@
+---
+import SiterealRichText from './sitereal/RichText.astro';
+interface Props {
+  icon?: string;
+  title?: string;
+  text?: string;
+}
+const { icon = "<rect fill=\"none\" height=\"10.5\" rx=\"1.8\" stroke=\"currentColor\" stroke-width=\"1.125\" width=\"13.5\" x=\"2.25\" y=\"4.5\"></rect><path d=\"M11.5 9.75h4.25M2.25 7.5h13.5\" fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-width=\"1.125\"></path>", title = "14-Day Money-Back Guarantee", text = "Bring your own server, refundable within 14 days." } = Astro.props;
+---
+<div class="w-card-guarantee" builder-data-element="div">
+  <div class="w-card-guarantee__body" builder-data-element="div">
+    <p class="w-card-guarantee__head" builder-data-element="text">
+      <svg class="w-card-guarantee__icon" builder-data-element="rich-text" aria-hidden="true" viewBox="0 0 18 18"><SiterealRichText html={icon} /></svg>
+      <span class="w-card-guarantee__title" builder-data-element="span">{title}</span>
+    </p>
+    <p class="w-card-guarantee__text" builder-data-element="text">{text}</p>
+  </div>
+</div>

@@ -1,0 +1,26 @@
+---
+import SiterealRichText from './sitereal/RichText.astro';
+interface Props {
+  link?: string;
+  plate?: string;
+  label?: string;
+  title?: string;
+  text?: string;
+  chips?: string;
+  linkLabel?: string;
+}
+const { link = "#", plate = "<span class=\"w-card-hosting__logo\"><img alt=\"\" class=\"w-card-hosting__logo-image\" src=\"https://xcloud.host/_landing/home/hosting-types/wordpress.svg\"/></span><span class=\"w-card-hosting__logo\"><img alt=\"\" class=\"w-card-hosting__logo-image\" src=\"https://xcloud.host/_landing/home/hosting-types/woocommerce.svg\"/></span>", label = "WordPress Hosting", title = "Fast, Safe WordPress and WooCommerce", text = "Caching, backups and SSL are ready from day one. Update plugins safely, with a backup first and a compatibility check.", chips = "<sitereal-component data-component=\"cmp-chip\" data-name=\"Chip\" data-props='{\"label\": \"Safe updates\"}'></sitereal-component><sitereal-component data-component=\"cmp-chip\" data-name=\"Chip\" data-props='{\"label\": \"Daily backups\"}'></sitereal-component><sitereal-component data-component=\"cmp-chip\" data-name=\"Chip\" data-props='{\"label\": \"Free SSL\"}'></sitereal-component>", linkLabel = "WordPress hosting" } = Astro.props;
+---
+<a class="w-card-hosting" builder-data-element="link" href={link}>
+  <span class="w-card-hosting__plate" builder-data-element="rich-text"><SiterealRichText html={plate} /></span>
+  <span class="w-card-hosting__body" builder-data-element="span">
+    <span class="w-card-hosting__label" builder-data-element="span">{label}</span>
+    <span class="w-card-hosting__title" builder-data-element="span">{title}</span>
+    <span class="w-card-hosting__text" builder-data-element="span">{text}</span>
+    <span class="w-card-hosting__chips" builder-data-element="rich-text"><SiterealRichText html={chips} /></span>
+    <span class="w-card-hosting__link" builder-data-element="span">
+      <span class="w-card-hosting__link-label" builder-data-element="span">{linkLabel}</span>
+      <svg class="w-card-hosting__link-icon" builder-data-element="svg" aria-hidden="true" viewBox="0 0 14 14"><path d="M5 3l4 4-4 4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"></path></svg>
+    </span>
+  </span>
+</a>

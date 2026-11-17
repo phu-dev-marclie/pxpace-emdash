@@ -1,0 +1,11 @@
+---
+interface Props {
+  value?: string;
+  label?: string;
+}
+const { value = "8 h", label = "PHP2Shell temporary fix, live before PHP's official fix" } = Astro.props;
+---
+<div class="w-stat" builder-data-element="div">
+  <p class="w-stat__value" builder-data-element="text">{value}</p>
+  <p class="w-stat__label" builder-data-element="text">{label}</p>
+</div>

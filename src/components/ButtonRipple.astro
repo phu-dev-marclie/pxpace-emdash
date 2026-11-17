@@ -1,0 +1,15 @@
+---
+interface Props {
+  link?: string;
+  variant?: string;
+  label?: string;
+}
+const { link = "#", variant = "", label = "From top" } = Astro.props;
+---
+<a class={`w-button-ripple ${variant}`} builder-data-element="link" href={link}>
+  <span class="w-button-ripple__fill" builder-data-element="span" aria-hidden="true"></span>
+  <span class="w-button-ripple__labels" builder-data-element="span">
+    <span class="w-button-ripple__label" builder-data-element="span">{label}</span>
+    <span class="w-button-ripple__label-next" builder-data-element="span" aria-hidden="true">{label}</span>
+  </span>
+</a>

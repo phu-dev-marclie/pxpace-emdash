@@ -1,0 +1,10 @@
+---
+interface Props {
+  label?: string;
+}
+const { label = "Facebook" } = Astro.props;
+---
+<a class="w-social-link" builder-data-element="link" href="#">
+  <slot />
+  <span class="w-social-link__label" builder-data-element="span">{label}</span>
+</a>

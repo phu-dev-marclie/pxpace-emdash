@@ -1,0 +1,18 @@
+---
+interface Props {
+  link?: string;
+  icon?: string;
+  title?: string;
+  description?: string;
+}
+const { link = "#", icon = "https://xcloud.host/_landing/mega-menu/icons/wordpress.svg", title = "WordPress Hosting", description = "Fast, safe WordPress and WooCommerce." } = Astro.props;
+---
+<a class="w-mega-item" builder-data-element="link" href={link}>
+  <span class="w-mega-item__icon" builder-data-element="span">
+    <img class="w-mega-item__image" builder-data-element="image" alt="" src={icon} />
+  </span>
+  <span class="w-mega-item__text" builder-data-element="span">
+    <span class="w-mega-item__title" builder-data-element="span">{title}</span>
+    <span class="w-mega-item__description" builder-data-element="span">{description}</span>
+  </span>
+</a>

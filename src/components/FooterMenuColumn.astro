@@ -1,0 +1,19 @@
+---
+import SiterealRichText from './sitereal/RichText.astro';
+interface Props {
+  title?: string;
+  menu?: string;
+  more?: string;
+  showMore?: boolean;
+}
+const { title = "Products &amp; Services", menu = "\n<li class=\"w-menu-column__item\"><a class=\"w-menu-column__link\" href=\"#\">Performance</a></li><li class=\"w-menu-column__item\"><a class=\"w-menu-column__link\" href=\"#\">One Click Apps</a></li><li class=\"w-menu-column__item\"><a class=\"w-menu-column__link\" href=\"#\">Hosting Addons</a></li><li class=\"w-menu-column__item\"><a class=\"w-menu-column__link\" href=\"#\">Cloudflare Enterprise</a></li><li class=\"w-menu-column__item\"><a class=\"w-menu-column__link\" href=\"#\">PXpace Managed Hosting</a></li><li class=\"w-menu-column__item\"><a class=\"w-menu-column__link\" href=\"#\">PXpace Self Managed Hosting</a></li><li class=\"w-menu-column__item\"><a class=\"w-menu-column__link\" href=\"#\">WordPress Hosting</a></li><li class=\"w-menu-column__item\"><a class=\"w-menu-column__link\" href=\"#\">Laravel Hosting</a></li><li class=\"w-menu-column__item\"><a class=\"w-menu-column__link\" href=\"#\">OpenClaw Hosting</a></li><li class=\"w-menu-column__item\"><a class=\"w-menu-column__link\" href=\"#\">Hermes Agent Hosting</a></li><li class=\"w-menu-column__item\"><a class=\"w-menu-column__link\" href=\"#\">Reseller Hosting</a></li><li class=\"w-menu-column__item\"><a class=\"w-menu-column__link\" href=\"#\">Agency Hosting</a></li><li class=\"w-menu-column__item\"><a class=\"w-menu-column__link\" href=\"#\">Enterprise Hosting</a></li><li class=\"w-menu-column__item\"><a class=\"w-menu-column__link\" href=\"#\">n8n Hosting</a></li><li class=\"w-menu-column__item\"><a class=\"w-menu-column__link\" href=\"#\">Node.js Hosting</a></li>\n", more = "Load More<svg aria-hidden=\"true\" class=\"w-menu-column__more-icon\" viewbox=\"0 0 16 16\"><path d=\"M4 6l4 4 4-4\" fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\"></path></svg>", showMore = false } = Astro.props;
+---
+<div class="w-menu-column" builder-data-element="div">
+  <p class="w-menu-column__title" builder-data-element="rich-text"><SiterealRichText html={title} /></p>
+  <ul class="w-menu-column__list" builder-data-element="rich-text"><SiterealRichText html={menu} /></ul>
+  {(showMore) && (
+    <>
+      <button class="w-menu-column__more" builder-data-element="rich-text" aria-expanded="false" data-menu-more="" type="button"><SiterealRichText html={more} /></button>
+    </>
+  )}
+</div>

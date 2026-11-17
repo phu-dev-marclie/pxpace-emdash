@@ -1,0 +1,20 @@
+---
+import SiterealRichText from './sitereal/RichText.astro';
+interface Props {
+  language?: string;
+  filename?: string;
+  code?: string;
+}
+const { language = "bash", filename = "Your terminal", code = "<code class=\"w-docs-code__code\"><span class=\"w-docs-code__comment\"># connect as the sudo user (key added in Server → SSH Keys)</span>\n<span class=\"w-docs-code__prompt\" data-code-prompt=\"\">$ </span>ssh pxpace@203.0.113.24\n<span class=\"w-docs-code__prompt\" data-code-prompt=\"\">$ </span>sudo systemctl status nginx mysql --no-pager\n<span class=\"w-docs-code__prompt\" data-code-prompt=\"\">$ </span>echo <span class=\"w-docs-code__string\">\"server is ready\"</span></code>" } = Astro.props;
+---
+<figure class="w-docs-code" builder-data-element="figure" data-code="">
+  <figcaption class="w-docs-code__bar">
+    <span class="w-docs-code__lang" builder-data-element="span">{language}</span>
+    <span class="w-docs-code__file" builder-data-element="span">{filename}</span>
+    <button class="w-docs-code__copy" builder-data-element="button" data-code-copy="" type="button">
+      <svg class="w-docs-code__copy-icon" builder-data-element="svg" aria-hidden="true" viewBox="0 0 20 20"><g fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.5"><rect height="9.5" rx="1.75" width="9.5" x="6.75" y="6.75"></rect><path d="M13.25 6.75V5.5a1.75 1.75 0 0 0-1.75-1.75h-6A1.75 1.75 0 0 0 3.75 5.5v6a1.75 1.75 0 0 0 1.75 1.75h1.25"></path></g></svg>
+      <span class="w-docs-code__copy-label" builder-data-element="span" data-code-copy-label="">Copy</span>
+    </button>
+  </figcaption>
+  <pre class="w-docs-code__pre" builder-data-element="rich-text"><SiterealRichText html={code} /></pre>
+</figure>

@@ -1,0 +1,13 @@
+---
+interface Props {
+  logo?: string;
+  label?: string;
+}
+const { logo = "https://xcloud.host/_landing/agent/logos-mono/claude-code.svg", label = "Claude Code" } = Astro.props;
+---
+<li class="w-tile-agent" builder-data-element="text">
+  <a class="w-tile-agent__link" builder-data-element="link" href="#">
+    <img class="w-tile-agent__logo" builder-data-element="image" alt="" src={logo} />
+    <span class="w-tile-agent__label" builder-data-element="span">{label}</span>
+  </a>
+</li>

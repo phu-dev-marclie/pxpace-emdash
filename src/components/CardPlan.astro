@@ -1,0 +1,25 @@
+---
+import SiterealRichText from './sitereal/RichText.astro';
+interface Props {
+  image?: string;
+  title?: string;
+  description?: string;
+  features?: string;
+}
+const { image = "https://xcloud.host/_landing/pricing/pricing-xcloud.png", title = "PXpace Hosting", description = "Fully managed hosting for dynamic, high-traffic sites, with automated daily backups and easy scaling built to deliver high-performance websites.", features = "<li class=\"w-card-plan__feature\"><svg aria-hidden=\"true\" class=\"w-card-plan__check\" viewbox=\"0 0 16 16\"><path d=\"M3.33 8l3.33 3.33 6.67-6.66\" fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.33\"></path></svg>Fully managed server setup</li><li class=\"w-card-plan__feature\"><svg aria-hidden=\"true\" class=\"w-card-plan__check\" viewbox=\"0 0 16 16\"><path d=\"M3.33 8l3.33 3.33 6.67-6.66\" fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.33\"></path></svg>Optimized hosting stack</li><li class=\"w-card-plan__feature\"><svg aria-hidden=\"true\" class=\"w-card-plan__check\" viewbox=\"0 0 16 16\"><path d=\"M3.33 8l3.33 3.33 6.67-6.66\" fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.33\"></path></svg>Daily automated backups</li><li class=\"w-card-plan__feature\"><svg aria-hidden=\"true\" class=\"w-card-plan__check\" viewbox=\"0 0 16 16\"><path d=\"M3.33 8l3.33 3.33 6.67-6.66\" fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.33\"></path></svg>Free SSL and renewal</li><li class=\"w-card-plan__feature\"><svg aria-hidden=\"true\" class=\"w-card-plan__check\" viewbox=\"0 0 16 16\"><path d=\"M3.33 8l3.33 3.33 6.67-6.66\" fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.33\"></path></svg>Support from expert engineers</li>" } = Astro.props;
+---
+<article class="w-card-plan" builder-data-element="div">
+  <div class="w-card-plan__media" builder-data-element="div">
+    <img class="w-card-plan__image" builder-data-element="image" alt="" src={image} />
+  </div>
+  <div class="w-card-plan__body" builder-data-element="div">
+    <div class="w-card-plan__text" builder-data-element="div">
+      <div class="w-card-plan__intro" builder-data-element="div">
+        <h3 class="w-card-plan__title" builder-data-element="heading">{title}</h3>
+        <p class="w-card-plan__description" builder-data-element="text">{description}</p>
+      </div>
+      <ul class="w-card-plan__features" builder-data-element="rich-text"><SiterealRichText html={features} /></ul>
+    </div>
+    <slot />
+  </div>
+</article>

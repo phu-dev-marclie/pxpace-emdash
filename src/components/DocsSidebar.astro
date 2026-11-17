@@ -1,0 +1,66 @@
+---
+import DocsSearchBox from './DocsSearchBox.astro';
+import DocsNavGroup from './DocsNavGroup.astro';
+interface Props {
+  metaLinkAriaCurrent?: string;
+  list?: string;
+}
+const { metaLinkAriaCurrent = "", list = "\n<li class=\"w-docs-nav-group__item\"><a class=\"w-docs-nav-group__link\" href=\"#\">Introduction</a></li>\n<li class=\"w-docs-nav-group__item\"><a class=\"w-docs-nav-group__link\" href=\"/docs/quick-start\">First Server &amp; Site</a></li>\n<li class=\"w-docs-nav-group__item\"><a class=\"w-docs-nav-group__link\" href=\"#\">Create a Site</a></li>\n<li class=\"w-docs-nav-group__item\"><a class=\"w-docs-nav-group__link\" href=\"#\">Demo Site</a></li>\n<li class=\"w-docs-nav-group__item\"><a class=\"w-docs-nav-group__link\" href=\"#\">DNS Records</a></li>\n<li class=\"w-docs-nav-group__item\"><a class=\"w-docs-nav-group__link w-docs-nav-group__link--all\" href=\"#\">All 6 Quick Start docs</a></li>\n" } = Astro.props;
+---
+<nav class="w-docs-sidebar" builder-data-element="div" aria-label="Documentation" data-docs-drawer="">
+  <div class="w-docs-sidebar__head" builder-data-element="div">
+    <a class="w-docs-sidebar__logo" builder-data-element="link" href="/">
+      <img class="w-docs-sidebar__logo-image w-docs-sidebar__logo-image--light" builder-data-element="image" alt="PXpace" height="24" src="/brand/pxpace-official-logo.svg" width="100" />
+      <img class="w-docs-sidebar__logo-image w-docs-sidebar__logo-image--dark" builder-data-element="image" alt="PXpace" height="24" src="/brand/pxpace-official-logo-white.svg" width="100" />
+    </a>
+    <button class="w-docs-sidebar__close" builder-data-element="button" aria-label="Close docs menu" data-docs-drawer-close="" type="button">
+      <svg class="w-docs-sidebar__close-icon" builder-data-element="svg" aria-hidden="true" viewBox="0 0 20 20"><path d="m5 5 10 10M15 5 5 15" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"></path></svg>
+    </button>
+  </div>
+  <DocsSearchBox label="Search docs" />
+  <ul class="w-docs-sidebar__meta" builder-data-element="list">
+    <li class="w-docs-sidebar__meta-item" builder-data-element="text">
+      <a class="w-docs-sidebar__meta-link" builder-data-element="link" aria-current={metaLinkAriaCurrent} href="/docs">
+        <svg class="w-docs-sidebar__meta-icon" builder-data-element="svg" aria-hidden="true" viewBox="0 0 20 20"><path d="M10 5.5C8.5 4.3 6.3 3.75 3.5 3.75v11c2.8 0 5 .55 6.5 1.75 1.5-1.2 3.7-1.75 6.5-1.75v-11c-2.8 0-5 .55-6.5 1.75Zm0 0v11" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.5"></path></svg>
+        <span class="w-docs-sidebar__meta-label" builder-data-element="span">All docs</span>
+      </a>
+    </li>
+    <li class="w-docs-sidebar__meta-item" builder-data-element="text">
+      <a class="w-docs-sidebar__meta-link" builder-data-element="link" href="#">
+        <svg class="w-docs-sidebar__meta-icon" builder-data-element="svg" aria-hidden="true" viewBox="0 0 20 20"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M12.6 4.4l3 3-8.4 8.4-3.7.7.7-3.7 8.4-8.4Z"></path><path d="m11 6 3 3"></path></g></svg>
+        <span class="w-docs-sidebar__meta-label" builder-data-element="span">Blog</span>
+      </a>
+    </li>
+    <li class="w-docs-sidebar__meta-item" builder-data-element="text">
+      <a class="w-docs-sidebar__meta-link" builder-data-element="link" href="#">
+        <svg class="w-docs-sidebar__meta-icon" builder-data-element="svg" aria-hidden="true" viewBox="0 0 20 20"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M3.75 10a6.25 6.25 0 1 0 1.83-4.42L3.75 7.4"></path><path d="M3.75 4v3.4h3.4M10 6.75V10l2.25 1.5"></path></g></svg>
+        <span class="w-docs-sidebar__meta-label" builder-data-element="span">Changelog</span>
+      </a>
+    </li>
+    <li class="w-docs-sidebar__meta-item" builder-data-element="text">
+      <a class="w-docs-sidebar__meta-link" builder-data-element="link" href="#">
+        <svg class="w-docs-sidebar__meta-icon" builder-data-element="svg" aria-hidden="true" viewBox="0 0 20 20"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M7.5 4 3 5.75V16l4.5-1.75 5 1.75L17 14.25V4l-4.5 1.75L7.5 4Z"></path><path d="M7.5 4v10.25M12.5 5.75V16"></path></g></svg>
+        <span class="w-docs-sidebar__meta-label" builder-data-element="span">Roadmap</span>
+      </a>
+    </li>
+    <li class="w-docs-sidebar__meta-item" builder-data-element="text">
+      <a class="w-docs-sidebar__meta-link" builder-data-element="link" href="#">
+        <svg class="w-docs-sidebar__meta-icon" builder-data-element="svg" aria-hidden="true" viewBox="0 0 20 20"><path d="M2.75 10h3l2-5 4 10 2-5h3.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg>
+        <span class="w-docs-sidebar__meta-label" builder-data-element="span">Status</span>
+        <span class="w-pill w-pill--success" builder-data-element="span">Operational</span>
+      </a>
+    </li>
+  </ul>
+  <div class="w-docs-sidebar__groups" builder-data-element="div">
+    <DocsNavGroup open iconViewBox="0 0 20 20" icon={"<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\"><path d=\"M8.5 13.5l-2-2C7.6 7.2 10.6 4.2 16.25 3.75 15.8 9.4 12.8 12.4 8.5 13.5Z\"></path><circle cx=\"12.25\" cy=\"7.75\" r=\"1.25\"></circle><path d=\"M6.5 11.5 4 11l2.25-3H9M8.5 13.5 9 16l3-2.25V11M5.25 14.75l-1.5 1.5\"></path></g>"} title="Quick Start" list={list} />
+    <DocsNavGroup open={false} iconViewBox="0 0 20 20" icon={"<g fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><circle cx=\"10\" cy=\"10\" r=\"6.75\"></circle><path d=\"M3.25 10h13.5M10 3.25c1.9 1.85 2.75 4.1 2.75 6.75S11.9 14.9 10 16.75C8.1 14.9 7.25 12.65 7.25 10S8.1 5.1 10 3.25Z\"></path></g>"} title="Sites" list={"\n<li class=\"w-docs-nav-group__item\"><a class=\"w-docs-nav-group__link\" href=\"#\">Staging Environment</a></li>\n<li class=\"w-docs-nav-group__item\"><a class=\"w-docs-nav-group__link\" href=\"#\">Domains &amp; SSL</a></li>\n<li class=\"w-docs-nav-group__item\"><a class=\"w-docs-nav-group__link\" href=\"#\">Redirects</a></li>\n<li class=\"w-docs-nav-group__item\"><a class=\"w-docs-nav-group__link w-docs-nav-group__link--all\" href=\"#\">All 24 Sites docs</a></li>\n"} />
+    <DocsNavGroup open={false} iconViewBox="0 0 20 20" icon={"<g fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><rect height=\"5\" rx=\"1.5\" width=\"13.5\" x=\"3.25\" y=\"3.75\"></rect><rect height=\"5\" rx=\"1.5\" width=\"13.5\" x=\"3.25\" y=\"11.25\"></rect></g><circle cx=\"6.25\" cy=\"6.25\" fill=\"currentColor\" r=\".9\"></circle><circle cx=\"6.25\" cy=\"13.75\" fill=\"currentColor\" r=\".9\"></circle>"} title="Servers" list={"\n<li class=\"w-docs-nav-group__item\"><a class=\"w-docs-nav-group__link\" href=\"#\">Server Locations</a></li>\n<li class=\"w-docs-nav-group__item\"><a class=\"w-docs-nav-group__link\" href=\"#\">Connect Any Provider</a></li>\n<li class=\"w-docs-nav-group__item\"><a class=\"w-docs-nav-group__link\" href=\"#\">Cron Jobs</a></li>\n<li class=\"w-docs-nav-group__item\"><a class=\"w-docs-nav-group__link w-docs-nav-group__link--all\" href=\"#\">All 31 Servers docs</a></li>\n"} />
+    <DocsNavGroup open={false} iconViewBox="0 0 20 20" icon={"<path d=\"M3.25 10h9M9.25 6.5 12.75 10l-3.5 3.5M16 4v12\" fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\"></path>"} title="Migration" list={"\n<li class=\"w-docs-nav-group__item\"><a class=\"w-docs-nav-group__link\" href=\"#\">Migrate a WordPress Site</a></li>\n<li class=\"w-docs-nav-group__item\"><a class=\"w-docs-nav-group__link\" href=\"#\">Full Server Migration</a></li>\n<li class=\"w-docs-nav-group__item\"><a class=\"w-docs-nav-group__link w-docs-nav-group__link--all\" href=\"#\">All 12 Migration docs</a></li>\n"} />
+    <DocsNavGroup open={false} iconViewBox="0 0 20 20" icon={"<g fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><ellipse cx=\"10\" cy=\"5.25\" rx=\"6\" ry=\"2.25\"></ellipse><path d=\"M4 5.25v9.5C4 16 6.7 17 10 17s6-1 6-2.25v-9.5M4 10c0 1.25 2.7 2.25 6 2.25s6-1 6-2.25\"></path></g>"} title="Backup" list={"\n<li class=\"w-docs-nav-group__item\"><a class=\"w-docs-nav-group__link\" href=\"#\">Site Backups</a></li>\n<li class=\"w-docs-nav-group__item\"><a class=\"w-docs-nav-group__link\" href=\"#\">Remote Storage</a></li>\n<li class=\"w-docs-nav-group__item\"><a class=\"w-docs-nav-group__link w-docs-nav-group__link--all\" href=\"#\">All 9 Backup docs</a></li>\n"} />
+    <DocsNavGroup open={false} iconViewBox="0 0 18 18" icon={"<path d=\"M9 1.9 3.4 4v4.4c0 3.5 2.4 6.4 5.6 7.6 3.2-1.2 5.6-4.1 5.6-7.6V4L9 1.9z\" fill=\"none\" stroke=\"currentColor\" stroke-linejoin=\"round\" stroke-width=\"1.125\"></path><path d=\"m6.6 9 1.7 1.7 3.2-3.4\" fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.125\"></path>"} title="Security" list={"\n<li class=\"w-docs-nav-group__item\"><a class=\"w-docs-nav-group__link\" href=\"#\">Firewall Rules</a></li>\n<li class=\"w-docs-nav-group__item\"><a class=\"w-docs-nav-group__link\" href=\"#\">Malware Scan</a></li>\n<li class=\"w-docs-nav-group__item\"><a class=\"w-docs-nav-group__link w-docs-nav-group__link--all\" href=\"#\">All 14 Security docs</a></li>\n"} />
+    <DocsNavGroup open={false} iconViewBox="0 0 20 20" icon={"<g fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><rect height=\"5.25\" rx=\"1.25\" width=\"5.25\" x=\"3.5\" y=\"3.5\"></rect><rect height=\"5.25\" rx=\"1.25\" width=\"5.25\" x=\"11.25\" y=\"3.5\"></rect><rect height=\"5.25\" rx=\"1.25\" width=\"5.25\" x=\"3.5\" y=\"11.25\"></rect><rect height=\"5.25\" rx=\"1.25\" width=\"5.25\" x=\"11.25\" y=\"11.25\"></rect></g>"} title="One-Click Apps" list={"\n<li class=\"w-docs-nav-group__item\"><a class=\"w-docs-nav-group__link\" href=\"#\">App Templates</a></li>\n<li class=\"w-docs-nav-group__item\"><a class=\"w-docs-nav-group__link\" href=\"#\">Domains &amp; Ports</a></li>\n<li class=\"w-docs-nav-group__item\"><a class=\"w-docs-nav-group__link w-docs-nav-group__link--all\" href=\"#\">All 18 One-Click Apps docs</a></li>\n"} />
+    <DocsNavGroup open={false} iconViewBox="0 0 20 20" icon={"<path d=\"M3.5 14a6.5 6.5 0 1 1 13 0M10 14l3-4\" fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\"></path>"} title="Cache" list={"\n<li class=\"w-docs-nav-group__item\"><a class=\"w-docs-nav-group__link\" href=\"#\">How Caching Works</a></li>\n<li class=\"w-docs-nav-group__item\"><a class=\"w-docs-nav-group__link\" href=\"#\">Redis Object Cache</a></li>\n<li class=\"w-docs-nav-group__item\"><a class=\"w-docs-nav-group__link w-docs-nav-group__link--all\" href=\"#\">All 7 Cache docs</a></li>\n"} />
+    <DocsNavGroup open={false} iconViewBox="0 0 20 20" icon={"<path d=\"M7.5 3.5v3.25M12.5 3.5v3.25M5.5 6.75h9v2.5a4.5 4.5 0 0 1-9 0v-2.5ZM10 13.75v2.75\" fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\"></path>"} title="Integrations" list={"\n<li class=\"w-docs-nav-group__item\"><a class=\"w-docs-nav-group__link\" href=\"#\">Cloudflare</a></li>\n<li class=\"w-docs-nav-group__item\"><a class=\"w-docs-nav-group__link\" href=\"#\">Slack Alerts</a></li>\n<li class=\"w-docs-nav-group__item\"><a class=\"w-docs-nav-group__link w-docs-nav-group__link--all\" href=\"#\">All 10 Integrations docs</a></li>\n"} />
+    <DocsNavGroup open={false} iconViewBox="0 0 20 20" icon={"<path d=\"m7 6-4 4 4 4M13 6l4 4-4 4M11.25 4.5l-2.5 11\" fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\"></path>"} title="Developer Tools" list={"\n<li class=\"w-docs-nav-group__item\"><a class=\"w-docs-nav-group__link\" href=\"#\">API Tokens</a></li>\n<li class=\"w-docs-nav-group__item\"><a class=\"w-docs-nav-group__link\" href=\"#\">PXpace MCP</a></li>\n<li class=\"w-docs-nav-group__item\"><a class=\"w-docs-nav-group__link w-docs-nav-group__link--all\" href=\"#\">All 11 Developer Tools docs</a></li>\n"} />
+  </div>
+</nav>

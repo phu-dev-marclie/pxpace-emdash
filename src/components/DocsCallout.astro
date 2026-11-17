@@ -1,0 +1,17 @@
+---
+import SiterealRichText from './sitereal/RichText.astro';
+interface Props {
+  variant?: string;
+  icon?: string;
+  title?: string;
+  text?: string;
+}
+const { variant = "", icon = "<path d=\"M7.75 14.25h4.5M8.5 16.75h3M10 3.25a4.75 4.75 0 0 0-2.75 8.6c.4.3.6.75.6 1.25v.15h4.3v-.15c0-.5.2-.95.6-1.25A4.75 4.75 0 0 0 10 3.25Z\" fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\"></path>", title = "Before you start", text = "You only need an email address. The self-managed plan includes 1 server and 10 sites for free; a payment method is needed for managed servers." } = Astro.props;
+---
+<aside class={`w-docs-callout ${variant}`} builder-data-element="div">
+  <svg class="w-docs-callout__icon" builder-data-element="rich-text" aria-hidden="true" viewBox="0 0 20 20"><SiterealRichText html={icon} /></svg>
+  <div class="w-docs-callout__body" builder-data-element="div">
+    <p class="w-docs-callout__title" builder-data-element="text">{title}</p>
+    <p class="w-docs-callout__text" builder-data-element="text">{text}</p>
+  </div>
+</aside>

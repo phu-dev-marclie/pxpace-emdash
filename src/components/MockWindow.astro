@@ -1,0 +1,8 @@
+---
+import SiterealRichText from './sitereal/RichText.astro';
+interface Props {
+  content?: string;
+}
+const { content = "\n<div class=\"w-mock__bar\"><span class=\"w-mock__dots\"><span class=\"w-mock__dot\"></span><span class=\"w-mock__dot w-mock__dot--yellow\"></span><span class=\"w-mock__dot w-mock__dot--green\"></span></span><span class=\"w-mock__title\">Updates Manager</span></div>\n<div class=\"w-mock__row\"><span class=\"w-chip\">Plugins 24</span><span class=\"w-mock__tab\">Themes 6</span><span class=\"w-mock__tab\">WordPress Core 3</span></div>\n<div class=\"w-mock__row\"><span class=\"w-mock__icon\"></span><span class=\"w-mock__name\">WooCommerce<span class=\"w-mock__meta\">8 Sites</span></span><span class=\"w-pill w-pill--success\">Update Available</span></div>\n<div class=\"w-mock__row\"><span class=\"w-mock__icon\"></span><span class=\"w-mock__name\">Yoast SEO<span class=\"w-mock__meta\">4 Sites</span></span><span class=\"w-pill w-pill--success\">Update Available</span></div>\n<div class=\"w-mock__row\"><span class=\"w-mock__icon\"></span><span class=\"w-mock__name\">Elementor Pro<span class=\"w-mock__meta\">2 Sites</span></span><span class=\"w-pill w-pill--warning\">Licence needed</span></div>\n<div class=\"w-mock__row\"><span class=\"w-mock__icon\"></span><span class=\"w-mock__name\">Page Builder<span class=\"w-mock__meta\">Needs PHP 8.1</span></span><span class=\"w-pill w-pill--warning\">Not compatible</span></div>\n" } = Astro.props;
+---
+<div class="w-mock" builder-data-element="rich-text"><SiterealRichText html={content} /></div>

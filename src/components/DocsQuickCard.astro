@@ -1,0 +1,22 @@
+---
+import SiterealRichText from './sitereal/RichText.astro';
+interface Props {
+  link?: string;
+  variant?: string;
+  glyphViewBox?: string;
+  icon?: string;
+  title?: string;
+  text?: string;
+}
+const { link = "/docs/quick-start", variant = "", glyphViewBox = "0 0 24 24", icon = "<path d=\"M13.5 3 5.5 13.2c-.3.4 0 .9.5.9H11l-.6 6.9c0 .5.6.7.9.3l8-10.2c.3-.4 0-.9-.5-.9H13.4l.6-6.9c0-.5-.6-.7-.9-.3Z\" fill=\"currentColor\"></path>", title = "Quick Start", text = "Set up your first server and site in minutes." } = Astro.props;
+---
+<a class={`w-docs-quick-card ${variant}`} builder-data-element="link" href={link}>
+  <span class="w-docs-quick-card__icon" builder-data-element="span">
+    <svg class="w-docs-quick-card__glyph" builder-data-element="rich-text" aria-hidden="true" viewBox={glyphViewBox}><SiterealRichText html={icon} /></svg>
+  </span>
+  <span class="w-docs-quick-card__body" builder-data-element="span">
+    <span class="w-docs-quick-card__title" builder-data-element="span">{title}</span>
+    <span class="w-docs-quick-card__text" builder-data-element="span">{text}</span>
+  </span>
+  <svg class="w-docs-quick-card__arrow" builder-data-element="svg" aria-hidden="true" viewBox="0 0 24 24"><path d="M4 12h16M13 5l7 7-7 7" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</a>

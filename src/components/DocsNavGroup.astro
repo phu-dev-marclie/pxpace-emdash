@@ -1,0 +1,19 @@
+---
+import SiterealRichText from './sitereal/RichText.astro';
+interface Props {
+  open?: boolean;
+  iconViewBox?: string;
+  icon?: string;
+  title?: string;
+  list?: string;
+}
+const { open = true, iconViewBox = "0 0 20 20", icon = "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\"><path d=\"M8.5 13.5l-2-2C7.6 7.2 10.6 4.2 16.25 3.75 15.8 9.4 12.8 12.4 8.5 13.5Z\"></path><circle cx=\"12.25\" cy=\"7.75\" r=\"1.25\"></circle><path d=\"M6.5 11.5 4 11l2.25-3H9M8.5 13.5 9 16l3-2.25V11M5.25 14.75l-1.5 1.5\"></path></g>", title = "Quick Start", list = "\n<li class=\"w-docs-nav-group__item\"><a class=\"w-docs-nav-group__link\" href=\"#\">Introduction</a></li>\n<li class=\"w-docs-nav-group__item\"><a class=\"w-docs-nav-group__link\" href=\"/docs/quick-start\">First Server &amp; Site</a></li>\n<li class=\"w-docs-nav-group__item\"><a class=\"w-docs-nav-group__link\" href=\"#\">Create a Site</a></li>\n<li class=\"w-docs-nav-group__item\"><a class=\"w-docs-nav-group__link\" href=\"#\">Demo Site</a></li>\n<li class=\"w-docs-nav-group__item\"><a class=\"w-docs-nav-group__link\" href=\"#\">DNS Records</a></li>\n<li class=\"w-docs-nav-group__item\"><a class=\"w-docs-nav-group__link w-docs-nav-group__link--all\" href=\"#\">All 6 Quick Start docs</a></li>\n" } = Astro.props;
+---
+<details class="w-docs-nav-group" open={open}>
+  <summary class="w-docs-nav-group__summary">
+    <svg class="w-docs-nav-group__icon" builder-data-element="rich-text" aria-hidden="true" viewBox={iconViewBox}><SiterealRichText html={icon} /></svg>
+    <span class="w-docs-nav-group__title" builder-data-element="span">{title}</span>
+    <svg class="w-docs-nav-group__chevron" builder-data-element="svg" aria-hidden="true" viewBox="0 0 16 16"><path d="M4 6l4 4 4-4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg>
+  </summary>
+  <ul class="w-docs-nav-group__list" builder-data-element="rich-text"><SiterealRichText html={list} /></ul>
+</details>

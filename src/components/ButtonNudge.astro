@@ -1,0 +1,14 @@
+---
+interface Props {
+  link?: string;
+  label?: string;
+  note?: string;
+}
+const { link = "#", label = "Reserve a server", note = "4 seats remaining" } = Astro.props;
+---
+<a class="w-button-nudge" builder-data-element="link" href={link}>
+  <span class="w-button-nudge__face" builder-data-element="span">{label}</span>
+  <span class="w-button-nudge__note" builder-data-element="span">
+    <span class="w-button-nudge__note-text" builder-data-element="span">{note}</span>
+  </span>
+</a>

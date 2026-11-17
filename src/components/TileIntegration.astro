@@ -1,0 +1,10 @@
+---
+interface Props {
+  iconAlt?: string;
+  icon?: string;
+}
+const { iconAlt = "Hetzner", icon = "https://xcloud.host/_landing/integrations/hetzner.svg" } = Astro.props;
+---
+<div class="w-tile-integration" builder-data-element="div">
+  <img class="w-tile-integration__icon" builder-data-element="image" alt={iconAlt} src={icon} />
+</div>

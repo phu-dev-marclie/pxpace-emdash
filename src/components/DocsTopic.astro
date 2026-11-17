@@ -1,0 +1,40 @@
+---
+import SiterealRichText from './sitereal/RichText.astro';
+interface Props {
+  glyphViewBox?: string;
+  icon?: string;
+  titleLinkLink?: string;
+  title?: string;
+  text?: string;
+  linkLink?: string;
+  link?: string;
+  link2?: string;
+  link3?: string;
+  link4?: string;
+}
+const { glyphViewBox = "0 0 20 20", icon = "<g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.5\"><path d=\"M8.5 13.5l-2-2C7.6 7.2 10.6 4.2 16.25 3.75 15.8 9.4 12.8 12.4 8.5 13.5Z\"></path><circle cx=\"12.25\" cy=\"7.75\" r=\"1.25\"></circle><path d=\"M6.5 11.5 4 11l2.25-3H9M8.5 13.5 9 16l3-2.25V11M5.25 14.75l-1.5 1.5\"></path></g>", titleLinkLink = "#", title = "Quick Start", text = "Create your first server and site.", linkLink = "/docs/quick-start", link = "First Server & Site", link2 = "Create a Site", link3 = "Demo Site", link4 = "DNS Records" } = Astro.props;
+---
+<article class="w-docs-topic" builder-data-element="div">
+  <span class="w-docs-topic__icon" builder-data-element="span">
+    <svg class="w-docs-topic__glyph" builder-data-element="rich-text" aria-hidden="true" viewBox={glyphViewBox}><SiterealRichText html={icon} /></svg>
+  </span>
+  <h3 class="w-docs-topic__title" builder-data-element="heading">
+    <a class="w-docs-topic__title-link" builder-data-element="link" href={titleLinkLink}>{title}</a>
+  </h3>
+  <p class="w-docs-topic__text" builder-data-element="text">{text}</p>
+  <ul class="w-docs-topic__list" builder-data-element="list">
+    <li class="w-docs-topic__item" builder-data-element="text">
+      <a class="w-docs-topic__link" builder-data-element="link" href={linkLink}>{link}</a>
+    </li>
+    <li class="w-docs-topic__item" builder-data-element="text">
+      <a class="w-docs-topic__link" builder-data-element="link" href="#">{link2}</a>
+    </li>
+    <li class="w-docs-topic__item" builder-data-element="text">
+      <a class="w-docs-topic__link" builder-data-element="link" href="#">{link3}</a>
+    </li>
+    <li class="w-docs-topic__item" builder-data-element="text">
+      <a class="w-docs-topic__link" builder-data-element="link" href="#">{link4}</a>
+    </li>
+  </ul>
+  <slot />
+</article>

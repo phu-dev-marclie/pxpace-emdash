@@ -1,0 +1,29 @@
+---
+interface Props {
+  label?: string;
+  title?: string;
+  link?: string;
+  link2?: string;
+  link3?: string;
+  link4?: string;
+}
+const { label = "SERVER", title = "Locked down from day one", link = "Firewall rules", link2 = "Automatic security updates", link3 = "Temporary fixes and patches for you", link4 = "Backups in two places" } = Astro.props;
+---
+<article class="w-card-security" builder-data-element="div">
+  <p class="w-card-security__label" builder-data-element="text">{label}</p>
+  <h3 class="w-card-security__title" builder-data-element="heading">{title}</h3>
+  <ul class="w-card-security__list" builder-data-element="list">
+    <li class="w-card-security__item" builder-data-element="text">
+      <a class="w-card-security__link" builder-data-element="link" href="#">{link}</a>
+    </li>
+    <li class="w-card-security__item" builder-data-element="text">
+      <a class="w-card-security__link" builder-data-element="link" href="#">{link2}</a>
+    </li>
+    <li class="w-card-security__item" builder-data-element="text">
+      <a class="w-card-security__link" builder-data-element="link" href="#">{link3}</a>
+    </li>
+    <li class="w-card-security__item" builder-data-element="text">
+      <a class="w-card-security__link" builder-data-element="link" href="#">{link4}</a>
+    </li>
+  </ul>
+</article>

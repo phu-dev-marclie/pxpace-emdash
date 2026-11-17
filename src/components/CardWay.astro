@@ -1,0 +1,13 @@
+---
+import ButtonText from './ButtonText.astro';
+import SiterealRichText from './sitereal/RichText.astro';
+interface Props {
+  text?: string;
+  label?: string;
+}
+const { text = "<strong class=\"w-card-way__lead\">MCP server.</strong> <span class=\"w-badge\">Recommended</span> Connect PXpace to Claude, ChatGPT, Cursor or any MCP client with one URL. Sign in through your browser, no token to paste.", label = "Learn about PXpace MCP" } = Astro.props;
+---
+<li class="w-card-way" builder-data-element="text">
+  <p class="w-card-way__text" builder-data-element="rich-text"><SiterealRichText html={text} /></p>
+  <ButtonText link="#" label={label} showIcon />
+</li>

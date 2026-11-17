@@ -1,0 +1,14 @@
+---
+import ButtonPrimary from './ButtonPrimary.astro';
+import SiterealRichText from './sitereal/RichText.astro';
+interface Props {
+  title?: string;
+  text?: string;
+}
+const { title = "Ready to <span class=\"w-highlight\">deploy?</span>", text = "Launch your site or app on PXpace in minutes." } = Astro.props;
+---
+<div class="w-docs-cta" builder-data-element="div">
+  <p class="w-docs-cta__title" builder-data-element="rich-text"><SiterealRichText html={title} /></p>
+  <p class="w-docs-cta__text" builder-data-element="text">{text}</p>
+  <ButtonPrimary link="#" variant="w-button-primary--small w-button-primary--block" label="Start deploying" />
+</div>

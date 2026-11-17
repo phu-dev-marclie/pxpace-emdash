@@ -1,0 +1,13 @@
+---
+interface Props {
+  link?: string;
+  label?: string;
+}
+const { link = "#", label = "Explore More" } = Astro.props;
+---
+<a class="w-button-dot" builder-data-element="link" href={link}>
+  <span class="w-button-dot__bullet" builder-data-element="span" aria-hidden="true">
+    <svg class="w-button-dot__icon" builder-data-element="svg" viewBox="0 0 24 24"><path d="M4 12h16M13 5l7 7-7 7" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+  </span>
+  <span class="w-button-dot__label" builder-data-element="span">{label}</span>
+</a>

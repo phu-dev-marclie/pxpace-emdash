@@ -1,0 +1,11 @@
+---
+interface Props {
+  icon?: string;
+  label?: string;
+}
+const { icon = "https://xcloud.host/_landing/tech-stack/laravel.svg", label = "Laravel" } = Astro.props;
+---
+<div class="w-tile-stack" builder-data-element="div">
+  <img class="w-tile-stack__icon" builder-data-element="image" alt="" src={icon} />
+  <span class="w-tile-stack__label" builder-data-element="span">{label}</span>
+</div>

@@ -1,0 +1,638 @@
+{
+  "format": "sitereal",
+  "version": 2,
+  "site": {
+    "name": "PXpace",
+    "lang": "en",
+    "favicon": "/favicon.svg",
+    "seo": {
+      "sitemap": true,
+      "robots": true
+    }
+  },
+  "addons": {},
+  "framework": {
+    "enabled": true,
+    "config": {
+      "modules": {},
+      "colors": {
+        "primary": {
+          "hex": "#5b8cff",
+          "on": true
+        },
+        "secondary": {
+          "hex": "#22c55e",
+          "on": false
+        },
+        "tertiary": {
+          "hex": "#a855f7",
+          "on": false
+        },
+        "accent": {
+          "hex": "#ff6a3d",
+          "on": true
+        },
+        "base": {
+          "hex": "#0e1220",
+          "on": true
+        },
+        "neutral": {
+          "hex": "#0b0b0d",
+          "on": true
+        },
+        "success": {
+          "hex": "#22c55e",
+          "on": false
+        },
+        "warning": {
+          "hex": "#f59e0b",
+          "on": false
+        },
+        "info": {
+          "hex": "#3b82f6",
+          "on": false
+        },
+        "danger": {
+          "hex": "#ef4444",
+          "on": false
+        },
+        "white": {
+          "hex": "#ffffff",
+          "on": true
+        },
+        "black": {
+          "hex": "#000000",
+          "on": true
+        }
+      },
+      "unifiedLightness": null,
+      "transparencyVars": true,
+      "shadeVars": true,
+      "shadeStops": {
+        "ultraLight": 95,
+        "light": 85,
+        "medium": 50,
+        "dark": 25,
+        "ultraDark": 10,
+        "hover": -8
+      },
+      "minVw": 375,
+      "maxVw": 1440,
+      "rootFontSize": 100,
+      "typeMinSize": 16,
+      "typeMinRatio": 1.2,
+      "typeMaxSize": 18,
+      "typeMaxRatio": 1.25,
+      "headingMinSize": 18,
+      "headingMinRatio": 1.25,
+      "headingMaxSize": 20,
+      "headingMaxRatio": 1.333,
+      "sizeOverrides": {},
+      "colorOverrides": {},
+      "headingFont": "system-ui, sans-serif",
+      "textFont": "system-ui, sans-serif",
+      "textSize": "var(--text-m)",
+      "textColor": "var(--base-400)",
+      "textWeight": 400,
+      "textLineHeight": "1.6",
+      "headingWeight": 700,
+      "headingLineHeight": "1.1",
+      "headingColor": "var(--base-400)",
+      "spaceMinSize": 16,
+      "spaceMinRatio": 1.5,
+      "spaceMaxSize": 24,
+      "spaceMaxRatio": 1.5,
+      "sectionMinSize": 48,
+      "sectionMinRatio": 1.5,
+      "sectionMaxSize": 80,
+      "sectionMaxRatio": 1.5,
+      "contentWidth": "80rem",
+      "containerSpacing": "var(--space-l)",
+      "contentSpacing": "var(--space-m)",
+      "layoutFluid": false,
+      "contentWidthMin": 640,
+      "contentWidthMax": 1280,
+      "borderWidth": "1px",
+      "borderLight": "var(--neutral-200)",
+      "borderDark": "var(--neutral-400)",
+      "elementStyles": {},
+      "buttons": {
+        "baseClass": "btn",
+        "tokens": {},
+        "variants": [
+          {
+            "id": "primary",
+            "label": "Primary",
+            "kind": "color",
+            "color": "primary",
+            "on": true,
+            "builtin": true
+          },
+          {
+            "id": "secondary",
+            "label": "Secondary",
+            "kind": "color",
+            "color": "secondary",
+            "on": true,
+            "builtin": true
+          },
+          {
+            "id": "tertiary",
+            "label": "Tertiary",
+            "kind": "color",
+            "color": "tertiary",
+            "on": true,
+            "builtin": true
+          },
+          {
+            "id": "accent",
+            "label": "Accent",
+            "kind": "color",
+            "color": "accent",
+            "on": true,
+            "builtin": true
+          },
+          {
+            "id": "base",
+            "label": "Base",
+            "kind": "color",
+            "color": "base",
+            "on": true,
+            "builtin": true
+          },
+          {
+            "id": "neutral",
+            "label": "Neutral",
+            "kind": "color",
+            "color": "neutral",
+            "on": true,
+            "builtin": true
+          },
+          {
+            "id": "success",
+            "label": "Success",
+            "kind": "color",
+            "color": "success",
+            "on": true,
+            "builtin": true
+          },
+          {
+            "id": "warning",
+            "label": "Warning",
+            "kind": "color",
+            "color": "warning",
+            "on": true,
+            "builtin": true
+          },
+          {
+            "id": "info",
+            "label": "Info",
+            "kind": "color",
+            "color": "info",
+            "on": true,
+            "builtin": true
+          },
+          {
+            "id": "danger",
+            "label": "Danger",
+            "kind": "color",
+            "color": "danger",
+            "on": true,
+            "builtin": true
+          },
+          {
+            "id": "white",
+            "label": "White",
+            "kind": "color",
+            "color": "white",
+            "on": true,
+            "builtin": true
+          },
+          {
+            "id": "black",
+            "label": "Black",
+            "kind": "color",
+            "color": "black",
+            "on": true,
+            "builtin": true
+          },
+          {
+            "id": "theme",
+            "label": "Theme",
+            "kind": "color",
+            "color": "primary",
+            "themed": true,
+            "on": true,
+            "builtin": true
+          },
+          {
+            "id": "outline",
+            "label": "Outline",
+            "kind": "style",
+            "on": true,
+            "builtin": true,
+            "tokens": {
+              "background": "transparent",
+              "text-color": "var(--btn-tone)",
+              "border-color": "var(--btn-tone)",
+              "background-hover": "var(--btn-tone)",
+              "text-color-hover": "var(--btn-tone-contrast)",
+              "border-color-hover": "var(--btn-tone)",
+              "shadow": "none"
+            }
+          },
+          {
+            "id": "soft",
+            "label": "Soft",
+            "kind": "style",
+            "on": true,
+            "builtin": true,
+            "tokens": {
+              "background": "var(--btn-tone-soft)",
+              "text-color": "var(--btn-tone)",
+              "border-color": "transparent",
+              "background-hover": "var(--btn-tone)",
+              "text-color-hover": "var(--btn-tone-contrast)",
+              "shadow": "none"
+            }
+          },
+          {
+            "id": "text",
+            "label": "Text",
+            "kind": "style",
+            "on": true,
+            "builtin": true,
+            "tokens": {
+              "background": "transparent",
+              "text-color": "var(--btn-tone)",
+              "border-color": "transparent",
+              "background-hover": "var(--btn-tone-soft)",
+              "text-color-hover": "var(--btn-tone-hover)",
+              "border-color-hover": "transparent",
+              "shadow": "none",
+              "padding-inline": "0.4em"
+            }
+          },
+          {
+            "id": "pill",
+            "label": "Pill",
+            "kind": "style",
+            "on": true,
+            "builtin": true,
+            "tokens": {
+              "border-radius": "999px"
+            }
+          },
+          {
+            "id": "block",
+            "label": "Full width",
+            "kind": "style",
+            "on": true,
+            "builtin": true,
+            "tokens": {
+              "width": "100%"
+            }
+          },
+          {
+            "id": "xs",
+            "label": "Extra small",
+            "kind": "size",
+            "on": true,
+            "builtin": true,
+            "tokens": {
+              "font-size": "var(--text-xs)",
+              "padding-block": "0.5em",
+              "padding-inline": "0.9em"
+            }
+          },
+          {
+            "id": "s",
+            "label": "Small",
+            "kind": "size",
+            "on": true,
+            "builtin": true,
+            "tokens": {
+              "font-size": "var(--text-s)",
+              "padding-block": "0.65em",
+              "padding-inline": "1.1em"
+            }
+          },
+          {
+            "id": "l",
+            "label": "Large",
+            "kind": "size",
+            "on": true,
+            "builtin": true,
+            "tokens": {
+              "font-size": "var(--text-l)",
+              "padding-block": "0.9em",
+              "padding-inline": "1.6em"
+            }
+          },
+          {
+            "id": "xl",
+            "label": "Extra large",
+            "kind": "size",
+            "on": true,
+            "builtin": true,
+            "tokens": {
+              "font-size": "var(--text-xl)",
+              "padding-block": "1em",
+              "padding-inline": "2em"
+            }
+          }
+        ]
+      },
+      "bodyBg": "var(--white)",
+      "radius": "8px",
+      "imageRadius": "0px",
+      "shadowStrength": 0.18,
+      "motionDuration": 700,
+      "motionEase": "smooth",
+      "motionDistance": "32px",
+      "motionStagger": 90,
+      "motionPerspective": "900px",
+      "textures": [],
+      "themes": [],
+      "source": "custom",
+      "customCss": "/* PXpace design system — tokens (tokens.py → tokens.css) + base layer (base.css). Light + dark (html[data-brx-theme]). */\n/* GENERATED by tokens_builder.py — do not edit; change the token spec and rerun it. */\n\n/* Color Manager */\n:root {\n  --primary: #1570EF;\n  --primary-l-1: #448df2;\n  --primary-l-2: #73a9f5;\n  --primary-l-3: #a1c6f9;\n  --primary-l-4: #d0e2fc;\n  --primary-d-1: #115abf;\n  --primary-d-2: #0d438f;\n  --primary-d-3: #082d60;\n  --primary-d-4: #041630;\n  --secondary: #23262C;\n  --secondary-l-1: #4f5156;\n  --secondary-l-2: #7b7d80;\n  --secondary-l-3: #a7a8ab;\n  --secondary-l-4: #d3d4d5;\n  --secondary-d-1: #1c1e23;\n  --secondary-d-2: #15171a;\n  --secondary-d-3: #0e0f12;\n  --secondary-d-4: #070809;\n  --tertiary: #F8F9FC;\n  --light: rgb(255, 255, 255);\n  --light-5: rgba(255, 255, 255, 0.05);\n  --light-10: rgba(255, 255, 255, 0.1);\n  --light-20: rgba(255, 255, 255, 0.2);\n  --light-30: rgba(255, 255, 255, 0.3);\n  --light-40: rgba(255, 255, 255, 0.4);\n  --light-50: rgba(255, 255, 255, 0.5);\n  --light-60: rgba(255, 255, 255, 0.6);\n  --light-70: rgba(255, 255, 255, 0.7);\n  --light-80: rgba(255, 255, 255, 0.8);\n  --light-90: rgba(255, 255, 255, 0.9);\n  --dark: rgb(0, 0, 0);\n  --dark-5: rgba(0, 0, 0, 0.05);\n  --dark-10: rgba(0, 0, 0, 0.1);\n  --dark-20: rgba(0, 0, 0, 0.2);\n  --dark-30: rgba(0, 0, 0, 0.3);\n  --dark-40: rgba(0, 0, 0, 0.4);\n  --dark-50: rgba(0, 0, 0, 0.5);\n  --dark-60: rgba(0, 0, 0, 0.6);\n  --dark-70: rgba(0, 0, 0, 0.7);\n  --dark-80: rgba(0, 0, 0, 0.8);\n  --dark-90: rgba(0, 0, 0, 0.9);\n  --all-light: rgb(255, 255, 255);\n  --all-light-5: rgba(255, 255, 255, 0.05);\n  --all-light-10: rgba(255, 255, 255, 0.1);\n  --all-light-20: rgba(255, 255, 255, 0.2);\n  --all-light-30: rgba(255, 255, 255, 0.3);\n  --all-light-40: rgba(255, 255, 255, 0.4);\n  --all-light-50: rgba(255, 255, 255, 0.5);\n  --all-light-60: rgba(255, 255, 255, 0.6);\n  --all-light-70: rgba(255, 255, 255, 0.7);\n  --all-light-80: rgba(255, 255, 255, 0.8);\n  --all-light-90: rgba(255, 255, 255, 0.9);\n  --all-dark: rgb(0, 0, 0);\n  --all-dark-5: rgba(0, 0, 0, 0.05);\n  --all-dark-10: rgba(0, 0, 0, 0.1);\n  --all-dark-20: rgba(0, 0, 0, 0.2);\n  --all-dark-30: rgba(0, 0, 0, 0.3);\n  --all-dark-40: rgba(0, 0, 0, 0.4);\n  --all-dark-50: rgba(0, 0, 0, 0.5);\n  --all-dark-60: rgba(0, 0, 0, 0.6);\n  --all-dark-70: rgba(0, 0, 0, 0.7);\n  --all-dark-80: rgba(0, 0, 0, 0.8);\n  --all-dark-90: rgba(0, 0, 0, 0.9);\n  --bg-body: var(--tertiary);\n  --bg-surface: #FFFFFF;\n  --bg-surface-2: #F6F7F9;\n  --bg-surface-3: #F3F5F9;\n  --bg-surface-4: #FBFCFD;\n  --bg-band: #EEEFF2;\n  --bg-base: var(--secondary);\n  --bg-base-2: #32353B;\n  --bg-base-3: #272A30;\n  --bg-night: #0F111E;\n  --bg-night-2: #151724;\n  --bg-night-3: #1C1E2E;\n  --bg-deep: #030F20;\n  --bg-sky: #0A1730;\n  --bg-accent: #EBF8FF;\n  --bg-accent-2: #E8EFFF;\n  --text-title: var(--secondary);\n  --text-body: #585D6A;\n  --text-body-dark: #808897;\n  --text-disabled: #969FB1;\n  --text-eyebrow: var(--primary);\n  --text-overline: #6A707E;\n  --text-highlight: var(--primary);\n  --text-dim: #808897;\n  --text-badge: #004FB9;\n  --text-chip: var(--primary-d-1);\n  --text-contrast: #F8F9FC;\n  --text-contrast-body: #969FB1;\n  --text-contrast-muted: #808897;\n  --text-contrast-highlight: #31B8FF;\n  --accent: var(--primary);\n  --icon: #6A707E;\n  --icon-muted: #969FB1;\n  --icon-contrast: #BCC1CC;\n  --border-subtle: #E5E8EB;\n  --border-light: #DBDEE4;\n  --border-dark: #BCC1CC;\n  --border-soft: #EBECF1;\n  --border-base: #303034;\n  --border-night: #1E2131;\n  --active: var(--primary);\n  --active-hover: #0062E5;\n  --hover: var(--primary);\n  --focus: var(--primary);\n  --success: #18AD4F;\n  --success-bg: #E2F6E9;\n  --success-fg: #067647;\n  --warning: #DB790B;\n  --warning-bg: #FBEEDD;\n  --warning-fg: #B54708;\n  --error: #CC4436;\n  --error-bg: #F8E5E3;\n  --error-fg: #B42318;\n  --btn-secondary-bg: #1F2022;\n  --btn-secondary-bg-hover: #222324;\n  --btn-secondary-ring: #090909;\n  --btn-outline-bg: #F8F9FC;\n  --btn-outline-bg-hover: #F6F7F8;\n  --btn-outline-fg: var(--secondary);\n  --btn-outline-ring: #DDE0E4;\n  --btn-ghost-border: rgba(182, 191, 204, 0.13);\n  --btn-ghost-bg-hover: rgba(255, 255, 255, 0.06);\n  --badge-rating-fg: #6C7075;\n  --badge-rating-bg-hover: #F5F6F8;\n  --badge-rating-star: #F59E0B;\n  --badge-pill-fg: var(--primary-d-1);\n  --badge-pill-dark-bg: rgba(205, 232, 255, 0.12);\n  --badge-pill-dark-fg: #B2DBFF;\n  --toggle-track: #DBDEE4;\n  --toggle-knob: #E9EBEF;\n  --hero-word-active: #0062E5;\n  --hero-word-agent: #D85E37;\n  --plan-title-fg: #1B2540;\n  --card-community-media-border: #E0E2E4;\n  --tile-integration-bg: rgba(255, 255, 255, 0.7);\n  --glass-bg: rgba(19, 68, 135, 0.08);\n  --glass-border: rgba(29, 88, 171, 0.1);\n  --mock-dot-red: #FF6159;\n  --mock-dot-yellow: #FFBD2E;\n  --mock-dot-green: #28C941;\n  --docs-tone-violet: #6D5AC7;\n}\n:root[data-brx-theme=\"dark\"] {\n  --light: rgb(0, 0, 0);\n  --light-5: rgba(0, 0, 0, 0.05);\n  --light-10: rgba(0, 0, 0, 0.1);\n  --light-20: rgba(0, 0, 0, 0.2);\n  --light-30: rgba(0, 0, 0, 0.3);\n  --light-40: rgba(0, 0, 0, 0.4);\n  --light-50: rgba(0, 0, 0, 0.5);\n  --light-60: rgba(0, 0, 0, 0.6);\n  --light-70: rgba(0, 0, 0, 0.7);\n  --light-80: rgba(0, 0, 0, 0.8);\n  --light-90: rgba(0, 0, 0, 0.9);\n  --dark: rgb(255, 255, 255);\n  --dark-5: rgba(255, 255, 255, 0.05);\n  --dark-10: rgba(255, 255, 255, 0.1);\n  --dark-20: rgba(255, 255, 255, 0.2);\n  --dark-30: rgba(255, 255, 255, 0.3);\n  --dark-40: rgba(255, 255, 255, 0.4);\n  --dark-50: rgba(255, 255, 255, 0.5);\n  --dark-60: rgba(255, 255, 255, 0.6);\n  --dark-70: rgba(255, 255, 255, 0.7);\n  --dark-80: rgba(255, 255, 255, 0.8);\n  --dark-90: rgba(255, 255, 255, 0.9);\n  --bg-body: #0F111E;\n  --bg-surface: #151724;\n  --bg-surface-2: #1C1E2E;\n  --bg-surface-3: #151724;\n  --bg-surface-4: #151724;\n  --bg-band: #13151F;\n  --bg-base: #23262C;\n  --bg-base-2: #32353B;\n  --bg-base-3: #272A30;\n  --bg-night: #0A0C16;\n  --bg-night-2: #121422;\n  --bg-night-3: #1A1C2B;\n  --bg-deep: #030F20;\n  --bg-sky: #0A1730;\n  --bg-accent: rgba(21, 112, 239, 0.16);\n  --bg-accent-2: rgba(21, 112, 239, 0.12);\n  --text-title: #F8F9FC;\n  --text-body: #A3AAB8;\n  --text-body-dark: #808897;\n  --text-disabled: #5D6475;\n  --text-eyebrow: #31B8FF;\n  --text-overline: #969FB1;\n  --text-highlight: #31B8FF;\n  --text-dim: #7C8496;\n  --text-badge: #7BD2FF;\n  --text-chip: #7BD2FF;\n  --text-contrast: #F8F9FC;\n  --text-contrast-body: #A3AAB8;\n  --text-contrast-muted: #808897;\n  --text-contrast-highlight: #31B8FF;\n  --accent: #31B8FF;\n  --icon: #969FB1;\n  --icon-muted: #808897;\n  --icon-contrast: #BCC1CC;\n  --border-subtle: #1E2131;\n  --border-light: #2E3348;\n  --border-dark: #3A4058;\n  --border-soft: #1E2131;\n  --border-base: #303034;\n  --border-night: #1A1D2B;\n  --active: #1570EF;\n  --active-hover: #3D8BF5;\n  --hover: #31B8FF;\n  --focus: #31B8FF;\n  --success: #4FD47F;\n  --success-bg: rgba(24, 173, 79, 0.16);\n  --success-fg: #75E0A7;\n  --warning: #F2A23C;\n  --warning-bg: rgba(219, 121, 11, 0.16);\n  --warning-fg: #FEC84B;\n  --error: #F07A6E;\n  --error-bg: rgba(204, 68, 54, 0.16);\n  --error-fg: #FDA29B;\n  --btn-secondary-bg: #262A3B;\n  --btn-secondary-bg-hover: #2C3044;\n  --btn-secondary-ring: #33384D;\n  --btn-outline-bg: #1C1E2E;\n  --btn-outline-bg-hover: #23273A;\n  --btn-outline-fg: #F8F9FC;\n  --btn-outline-ring: #2E3348;\n  --btn-ghost-border: rgba(182, 191, 204, 0.18);\n  --btn-ghost-bg-hover: rgba(255, 255, 255, 0.06);\n  --badge-rating-fg: #A3AAB8;\n  --badge-rating-bg-hover: #1C1E2E;\n  --badge-rating-star: #FBBF24;\n  --badge-pill-fg: #7BD2FF;\n  --badge-pill-dark-bg: rgba(205, 232, 255, 0.12);\n  --badge-pill-dark-fg: #B2DBFF;\n  --toggle-track: #2E3348;\n  --toggle-knob: #F8F9FC;\n  --hero-word-active: #4DA3FF;\n  --hero-word-agent: #F08A66;\n  --plan-title-fg: #F8F9FC;\n  --card-community-media-border: #2E3348;\n  --tile-integration-bg: rgba(255, 255, 255, 0.04);\n  --glass-bg: rgba(21, 112, 239, 0.16);\n  --glass-border: rgba(21, 112, 239, 0.24);\n  --docs-tone-violet: #A99BFF;\n}\n\n/* Global variables */\n:root {\n  --text-xs: 12px;\n  --text-s: 14px;\n  --text-m: 16px;\n  --text-l: clamp(16px, calc(0.001786 * (100vw - 320px) + 16px), 18px);\n  --text-xl: clamp(20px, calc(0.003571 * (100vw - 320px) + 20px), 24px);\n  --text-2xl: clamp(24px, calc(0.007143 * (100vw - 320px) + 24px), 32px);\n  --text-3xl: clamp(26px, calc(0.008929 * (100vw - 320px) + 26px), 36px);\n  --text-4xl: clamp(28px, calc(0.010714 * (100vw - 320px) + 28px), 40px);\n  --text-5xl: clamp(30px, calc(0.016071 * (100vw - 320px) + 30px), 48px);\n  --text-6xl: clamp(32px, calc(0.021429 * (100vw - 320px) + 32px), 56px);\n  --text-7xl: clamp(34px, calc(0.023214 * (100vw - 320px) + 34px), 60px);\n  --space-3xs: 4px;\n  --space-2xs: 8px;\n  --space-xs: 12px;\n  --space-s: 16px;\n  --space-m: clamp(16px, calc(0.003571 * (100vw - 320px) + 16px), 20px);\n  --space-l: clamp(20px, calc(0.003571 * (100vw - 320px) + 20px), 24px);\n  --space-xl: clamp(24px, calc(0.007143 * (100vw - 320px) + 24px), 32px);\n  --space-2xl: clamp(32px, calc(0.014286 * (100vw - 320px) + 32px), 48px);\n  --space-3xl: clamp(40px, calc(0.021429 * (100vw - 320px) + 40px), 64px);\n  --space-4xl: clamp(48px, calc(0.028571 * (100vw - 320px) + 48px), 80px);\n  --space-5xl: clamp(64px, calc(0.050000 * (100vw - 320px) + 64px), 120px);\n  --line-height-2xs: 1;\n  --line-height-xs: 1.05;\n  --line-height-s: 1.1;\n  --line-height-m: 1.2;\n  --line-height-l: 1.3;\n  --line-height-xl: 1.4;\n  --line-height-2xl: 1.5;\n  --line-height-3xl: 1.6;\n  --line-height-4xl: 1.75;\n  --font-family: \"Inter Tight\", system-ui, sans-serif;\n  --font-family-display: \"Funnel Display\", \"Inter Tight\", system-ui, sans-serif;\n  --font-family-serif: \"Instrument Serif\", Georgia, serif;\n  --font-size-serif: 1.15em;\n  --font-family-mono: \"Geist Mono\", ui-monospace, \"SFMono-Regular\", Menlo, monospace;\n  --font-weight-body: 400;\n  --font-weight-medium: 500;\n  --font-weight-strong: 600;\n  --font-weight-heading: 500;\n  --letter-spacing-display: -1.2px;\n  --letter-spacing-heading: -1px;\n  --letter-spacing-heading-s: -0.96px;\n  --letter-spacing-heading-xs: -0.24px;\n  --letter-spacing-eyebrow: 0.4px;\n  --letter-spacing-mono: 0.6px;\n  --max-screen-width: 1440px;\n  --layout-frame: 1200px;\n  --container-padding: 0px;\n  --layout-margin: 20px;\n  --layout-inset: 32px;\n  --layout-prose: 820px;\n  --layout-header-h: 72px;\n  --layout-docs-sidebar: 224px;\n  --layout-docs-rail: 200px;\n  --layout-docs-measure: 700px;\n  --columns-2: repeat(2, minmax(0, 1fr));\n  --columns-3: repeat(3, minmax(0, 1fr));\n  --columns-4: repeat(4, minmax(0, 1fr));\n  --radius-xs: 4px;\n  --radius-s: 8px;\n  --radius-m: 12px;\n  --radius-l: 16px;\n  --radius-xl: 20px;\n  --radius-2xl: 24px;\n  --radius-3xl: 32px;\n  --radius-full: 999px;\n  --stroke-subtle: 1px solid var(--border-subtle);\n  --stroke: 1px solid var(--border-light);\n  --stroke-strong: 1px solid var(--border-dark);\n  --shadow-xs: 0 1px 3px rgba(0, 0, 0, 0.06);\n  --shadow-s: 0 1px 4px rgba(0, 0, 0, 0.16);\n  --shadow-m: 0 8px 24px rgba(16, 24, 40, 0.08);\n  --shadow-l: 0 20px 44px -28px rgba(35, 38, 44, 0.45);\n  --shadow-xl: 0 0 0 1px rgba(51, 51, 51, 0.08), 0 32px 70px -28px rgba(20, 30, 55, 0.5);\n  --shadow-glass: 0 10px 26.667px rgba(18, 58, 115, 0.08), inset 0 1px 3px 2px rgba(255, 255, 255, 0.54);\n  --shadow-popover: 0 0 0 1px rgba(16, 24, 40, 0.06), 0 4px 8px -4px rgba(16, 24, 40, 0.06), 0 16px 32px -12px rgba(16, 24, 40, 0.2);\n  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);\n  --ease-reveal: cubic-bezier(0.33, 1, 0.68, 1);\n  --ease-spring: cubic-bezier(0.16, 1, 0.3, 1);\n  --ease-overshoot: cubic-bezier(0.34, 1.56, 0.64, 1);\n  --duration-fast: 150ms;\n  --duration-base: 200ms;\n  --duration-slow: 300ms;\n  --duration-reveal: 600ms;\n  --gradient-accent-bar: linear-gradient(180deg, #1570EF 0%, #1594EF 54%, #15DDEF 100%);\n  --gradient-fade-bottom: linear-gradient(transparent 0%, var(--bg-body) 92%);\n  --gradient-fade-top: linear-gradient(180deg, var(--bg-body) 0%, transparent 100%);\n  --pattern-dots: radial-gradient(var(--border-subtle) 1px, transparent 1px);\n  --mask-fade-x: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);\n  --btn-primary-bg: var(--active);\n  --btn-primary-fg: var(--all-light);\n  --btn-primary-shadow: 0 0 0 1px #1469DF, inset 1px 1px 2px rgba(112, 172, 255, 0.8), 0 6px 12px -6px rgba(21, 112, 239, 0.81);\n  --btn-primary-shadow-hover: 0 0 0 1px #1469DF, inset 1px 1px 2px rgba(112, 172, 255, 0.8);\n  --btn-secondary-fg: var(--all-light);\n  --btn-secondary-shadow: 0 0 0 1px var(--btn-secondary-ring), 0 6px 12px -6px rgba(31, 32, 34, 0.8);\n  --btn-secondary-shadow-hover: 0 0 0 1px var(--btn-secondary-ring);\n  --btn-outline-shadow: 0 0 0 1px var(--btn-outline-ring), 0 1px 3px 0 rgba(0, 0, 0, 0.08);\n  --btn-ghost-fg: var(--all-light);\n  --btn-track-tab-bg: linear-gradient(180deg, rgba(255, 255, 255, 0.28) 0%, rgba(255, 255, 255, 0) 78%), var(--btn-primary-bg);\n  --btn-track-pattern: url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='12' viewBox='0 0 14 12'%3E%3Cpath d='M5 2.5 8.5 6 5 9.5' fill='none' stroke='white' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E\");\n  --btn-track-mask: linear-gradient(90deg, transparent 8px, #000 16px, #000 calc(100% - 16px), transparent calc(100% - 8px));\n  --btn-nudge-shimmer: linear-gradient(90deg, var(--text-chip) 40%, var(--text-title) 50%, var(--text-chip) 60%);\n  --btn-glow-gradient: conic-gradient(from 0deg, transparent 0deg 220deg, #15DDEF 300deg, #1570EF 360deg);\n  --btn-glow-shadow: 0 8px 24px -8px rgba(21, 112, 239, 0.55);\n  --card-testimonial-shadow-hover: 0 0 12px 2px rgba(0, 39, 80, 0.02), 0 8px 22px -8px rgba(0, 39, 80, 0.1);\n  --glyph-color: 225, 240, 255;\n  --input-height: 44px;\n  --input-ring-focus: 0 0 0 4px color-mix(in srgb, var(--focus) 18%, transparent);\n  --input-ring-error: 0 0 0 4px color-mix(in srgb, var(--error) 16%, transparent);\n  --form-check-mask: url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M2.6 6.3 5 8.6l4.4-5.1' fill='none' stroke='black' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E\");\n}\n\n/* Theme style */\n:root[data-brx-theme=\"dark\"] {\n  color-scheme: dark;\n  --shadow-m: 0 8px 24px rgba(0, 0, 0, 0.45);\n  --shadow-l: 0 20px 44px -28px rgba(0, 0, 0, 0.8);\n  --shadow-xl: 0 0 0 1px rgba(255, 255, 255, 0.06), 0 32px 70px -28px rgba(0, 0, 0, 0.8);\n  --shadow-glass: 0 10px 26.667px rgba(0, 0, 0, 0.4), inset 0 1px 3px 2px rgba(255, 255, 255, 0.06);\n  --card-testimonial-shadow-hover: 0 8px 22px -8px rgba(0, 0, 0, 0.6);\n  --shadow-popover: 0 0 0 1px rgba(255, 255, 255, 0.08), 0 16px 40px -12px rgba(0, 0, 0, 0.75);\n}\n\n/* ==========================================================================\n   bem-lint: base\n   BASE layer = Bricks theme style + Bricks' own element CSS. The ONLY stylesheet allowed to\n   select tags or bare data-* attributes.\n   Load order: tokens.css (generated by tokens.py) → base.css → components.css → sections/*.css\n   In Bricks: section 0 = Bricks › Custom fonts (one family per font, one face per weight, same woff2\n   files), sections 1–2 = Theme style (Typography / Links / Custom CSS), section 3 = Theme style\n   Custom CSS, section 4 = Bricks' own element CSS (do not import).\n   ========================================================================== */\n\n/* ---------- 0. Self-hosted fonts (fonts/build_fonts.py: EN · FR · DE · HR · VI subsets) ---------- */\n/* ---------- 1. Reset & element typography (Theme style › Typography) ---------- */\n*, *::before, *::after { box-sizing: border-box; }\nbutton, input, select, textarea { font: inherit; color: inherit; }\nhtml { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; overflow-x: clip; }\nbody {\n  margin: 0; overflow-x: clip;\n  font-family: var(--font-family); font-weight: var(--font-weight-body);\n  font-size: var(--text-m); line-height: var(--line-height-2xl);\n  color: var(--text-title); background: var(--bg-body); -webkit-font-smoothing: antialiased;\n}\nimg, svg, video, canvas { max-width: 100%; display: block; }\nimg, video { height: auto; }\nh1, h2, h3, h4, h5, h6 {\n  margin: 0; font-family: var(--font-family-display); font-weight: var(--font-weight-heading);\n}\np, ul, ol, dl, dd, figure { margin: 0; }\nul, ol { padding: 0; list-style: none; }\na { color: inherit; text-decoration: none; }\nstrong { font-weight: var(--font-weight-strong); }\n:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }\n\n/* ---------- 2. Section surfaces ----------\n   every top-level section carries data-surface; a surface sets its background and re-points the\n   tokens its content reads — it never styles a descendant. */\n[data-surface=\"default\"] { background: var(--bg-body); }\n[data-surface=\"raised\"]  { background: var(--bg-surface); }\n[data-surface=\"band\"]    { background: var(--bg-band); --border-subtle: var(--border-light); --stroke-subtle: 1px solid var(--border-light); }\n[data-surface=\"base\"],\n[data-surface=\"night\"] {\n  color: var(--text-contrast);\n  --text-title: var(--text-contrast);\n  --text-body: var(--text-contrast-body);\n  --text-body-dark: var(--text-contrast-muted);\n  --text-eyebrow: var(--text-contrast-muted);\n  --text-highlight: var(--text-contrast-highlight);\n  --text-dim: var(--text-contrast-body);\n  --hover: var(--text-contrast-highlight);\n}\n[data-surface=\"base\"]  { background: var(--bg-base);  --border-subtle: var(--border-base);  --stroke-subtle: 1px solid var(--border-base); }\n[data-surface=\"night\"] { background: var(--bg-night); --border-subtle: var(--border-night); --stroke-subtle: 1px solid var(--border-night); }\n\n/* ---------- 3. Engine states keyed on behaviour hooks ---------- */\n[hidden] { display: none !important; }\n/* scroll reveal (site.js adds .is-in): 24px rise, 600ms easeOutCubic; children stagger 45ms */\nhtml.has-js [data-animate] {\n  opacity: 0; transform: translateY(24px);\n  transition: opacity var(--duration-reveal) var(--ease-reveal), transform var(--duration-reveal) var(--ease-reveal);\n}\nhtml.has-js [data-animate].is-in { opacity: 1; transform: none; }\nhtml.has-js [data-animate] [data-stagger] {\n  opacity: 0; transform: translateY(14px);\n  transition: opacity 550ms var(--ease-reveal), transform 550ms var(--ease-reveal);\n}\nhtml.has-js [data-animate] [data-stagger]:nth-child(2) { transition-delay: 45ms; }\nhtml.has-js [data-animate] [data-stagger]:nth-child(3) { transition-delay: 90ms; }\nhtml.has-js [data-animate] [data-stagger]:nth-child(4) { transition-delay: 135ms; }\nhtml.has-js [data-animate] [data-stagger]:nth-child(5) { transition-delay: 180ms; }\nhtml.has-js [data-animate] [data-stagger]:nth-child(6) { transition-delay: 225ms; }\nhtml.has-js [data-animate].is-in [data-stagger] { opacity: 1; transform: none; }\n@media (prefers-reduced-motion: reduce) {\n  html { scroll-behavior: auto; }\n  *, *::before, *::after { transition-duration: 0.001ms !important; animation-duration: 0.001ms !important; }\n  html.has-js [data-animate], html.has-js [data-animate] [data-stagger] { opacity: 1; transform: none; }\n}\n\n/* ---------- 4. Bricks element defaults, keyed on data-brx (reproduces Bricks' frontend CSS) ---------- */\n[builder-data-element] { max-width: 100%; }\n[builder-data-element=\"section\"] { display: flex; flex-direction: column; align-items: center; width: 100%; margin-inline: auto; }\n[builder-data-element=\"container\"] {\n  display: flex; flex-direction: column; align-items: flex-start; box-sizing: border-box;\n  width: var(--max-screen-width); max-width: 100%; margin-inline: auto; padding-inline: var(--container-padding);\n}\n[builder-data-element=\"flex\"] { display: flex; flex-direction: column; align-items: flex-start; width: 100%; }\n[builder-data-element=\"div\"] { display: block; }\n@media (max-width: 767px) {\n  [builder-data-element=\"section\"], [builder-data-element=\"container\"], [builder-data-element=\"flex\"], [builder-data-element=\"div\"] { flex-wrap: wrap; }\n}\n\n/* ---------- 5. Rich text (Theme style › Typography / Bricks \"Rich text\" + \"Post content\") ----------\n   CMS copy that cannot carry classes sits in a container marked data-prose (docs article body).\n   Only the rich-text flow (direct children + list items + inline code) is styled; classed components\n   placed inside the flow (w-docs-callout, w-docs-code, w-docs-figure, w-docs-steps) keep their own rules. */\n[data-prose] { font-size: var(--text-m); line-height: var(--line-height-4xl); color: var(--text-body); }\n[data-prose] > :first-child { margin-top: 0; }\n[data-prose] > h2 {\n  margin: var(--space-3xl) 0 var(--space-s); scroll-margin-top: var(--space-xl);\n  font-size: var(--text-xl); line-height: var(--line-height-l); letter-spacing: var(--letter-spacing-heading-xs); color: var(--text-title);\n}\n[data-prose] > h3 {\n  margin: var(--space-2xl) 0 var(--space-2xs); scroll-margin-top: var(--space-xl);\n  font-size: var(--text-l); line-height: var(--line-height-xl); color: var(--text-title);\n}\n[data-prose] > p { margin: 0 0 var(--space-m); }\n[data-prose] > :is(ul, ol):not([class]) { margin: 0 0 var(--space-m); padding-left: var(--space-l); }\n[data-prose] > ul:not([class]) { list-style: disc; }\n[data-prose] > ol:not([class]) { list-style: decimal; }\n[data-prose] > :is(ul, ol):not([class]) > li { margin-bottom: var(--space-2xs); padding-left: var(--space-3xs); }\n[data-prose] > :is(ul, ol):not([class]) > li::marker { color: var(--icon-muted); font-family: var(--font-family-mono); font-size: 0.875em; }\n[data-prose] > hr { margin: var(--space-2xl) 0; border: 0; border-top: var(--stroke-subtle); }\n[data-prose] > p a, [data-prose] > :is(ul, ol):not([class]) a {\n  color: var(--active-hover); text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px;\n  text-decoration-color: color-mix(in srgb, var(--active-hover) 35%, transparent);\n  transition: text-decoration-color var(--duration-fast);\n}\n[data-prose] > p a:hover, [data-prose] > :is(ul, ol):not([class]) a:hover { text-decoration-color: currentColor; }\n[data-prose] strong { color: var(--text-title); }\n[data-prose] > p code, [data-prose] > :is(ul, ol):not([class]) code {\n  padding: 1px 6px; border: var(--stroke-subtle); border-radius: var(--radius-xs); background: var(--bg-surface-2);\n  font-family: var(--font-family-mono); font-size: 0.85em; color: var(--text-title); white-space: nowrap;\n}\n[data-prose] kbd {\n  padding: 1px 6px; border: var(--stroke); border-bottom-width: 2px; border-radius: var(--radius-xs); background: var(--bg-surface);\n  font-family: var(--font-family-mono); font-size: 0.8em; color: var(--text-title);\n}\n"
+    }
+  },
+  "variables": [],
+  "styles": [],
+  "fonts": [
+    {
+      "family": "Funnel Display",
+      "slug": "funnel-display",
+      "weights": [
+        "400",
+        "500",
+        "600"
+      ],
+      "files": 3,
+      "custom": true
+    },
+    {
+      "family": "Geist Mono",
+      "slug": "geist-mono",
+      "weights": [
+        "400",
+        "500"
+      ],
+      "files": 2,
+      "custom": true
+    },
+    {
+      "family": "Instrument Serif",
+      "slug": "instrument-serif",
+      "weights": [
+        "400i"
+      ],
+      "files": 1,
+      "custom": true
+    },
+    {
+      "family": "Inter Tight",
+      "slug": "inter-tight",
+      "weights": [
+        "400",
+        "500",
+        "600"
+      ],
+      "files": 3,
+      "custom": true
+    }
+  ],
+  "icons": [],
+  "components": [
+    {
+      "name": "Probe Cond",
+      "props": [
+        {
+          "name": "label",
+          "type": "text",
+          "value": "Go"
+        },
+        {
+          "name": "showIcon",
+          "type": "boolean",
+          "value": "true"
+        }
+      ],
+      "root": [
+        {
+          "tag": "a",
+          "classes": [
+            "w-pc"
+          ],
+          "attrs": {
+            "builder-data-element": "link",
+            "href": "#"
+          },
+          "name": "pc",
+          "children": [
+            {
+              "tag": "span",
+              "classes": [
+                "w-pc__label"
+              ],
+              "attrs": {
+                "builder-data-element": "span"
+              },
+              "text": "{props.label}",
+              "name": "label",
+              "id": "span-mwj3mse4-7"
+            },
+            {
+              "tag": "div",
+              "attrs": {
+                "builder-data-element": "condition"
+              },
+              "cond": {
+                "mode": "custom",
+                "expr": "props.showIcon"
+              },
+              "name": "if icon",
+              "children": [
+                {
+                  "tag": "svg",
+                  "classes": [
+                    "w-pc__icon"
+                  ],
+                  "attrs": {
+                    "builder-data-element": "svg",
+                    "viewBox": "0 0 18 18",
+                    "aria-hidden": "true"
+                  },
+                  "html": "<path d=\"M4 9h9\"/>",
+                  "name": "icon",
+                  "id": "svg-mwj3mse4-9"
+                }
+              ],
+              "id": "div-mwj3mse4-8"
+            }
+          ],
+          "id": "a-mwj3mse4-6"
+        }
+      ],
+      "stylesheets": [],
+      "id": "cmp-probe-cond",
+      "shape": "plain"
+    },
+    {
+      "name": "Probe Outer",
+      "props": [
+        {
+          "name": "btnLabel",
+          "type": "text",
+          "value": "Hey"
+        },
+        {
+          "name": "chips",
+          "type": "richtext",
+          "value": "<sitereal-component data-component=\"cmp-probe-cond\" data-name=\"Probe Cond\" data-props='{\"label\":\"InRich\",\"showIcon\":false}'></sitereal-component>"
+        }
+      ],
+      "root": [
+        {
+          "tag": "div",
+          "classes": [
+            "w-po"
+          ],
+          "attrs": {
+            "builder-data-element": "div"
+          },
+          "name": "po",
+          "children": [
+            {
+              "tag": "ProbeCond",
+              "component": "cmp-probe-cond",
+              "props": {
+                "label": "{props.btnLabel}",
+                "showIcon": "false"
+              },
+              "attrs": {
+                "builder-data-element": "component"
+              },
+              "id": "ProbeCond-mwj3n4qv-11"
+            },
+            {
+              "tag": "div",
+              "classes": [
+                "w-po__chips"
+              ],
+              "attrs": {
+                "builder-data-element": "rich-text"
+              },
+              "html": "{props.chips}",
+              "name": "chips",
+              "id": "div-mwj3n4qv-12"
+            }
+          ],
+          "id": "div-mwj3n4qv-10"
+        }
+      ],
+      "stylesheets": [],
+      "id": "cmp-probe-outer",
+      "shape": "plain"
+    }
+  ],
+  "templates": [
+    {
+      "id": "tpl-mwj2rj4d-1",
+      "name": "Main",
+      "root": [
+        {
+          "id": "main-mwj2rj4d-1",
+          "tag": "main",
+          "attrs": {
+            "builder-data-element": "site-content",
+            "id": "main"
+          },
+          "children": [
+            {
+              "id": "page-content-mwj2rj4d-2",
+              "tag": "page-content",
+              "attrs": {
+                "builder-data-element": "page-content"
+              }
+            }
+          ]
+        }
+      ],
+      "stylesheets": [],
+      "applyTo": {
+        "all": true
+      }
+    },
+    {
+      "id": "tpl-mwj2rj4d-2",
+      "name": "404",
+      "root": [
+        {
+          "id": "main-mwj2rj4d-3",
+          "tag": "main",
+          "attrs": {
+            "builder-data-element": "site-content",
+            "id": "main"
+          },
+          "children": [
+            {
+              "id": "page-content-mwj2rj4d-4",
+              "tag": "page-content",
+              "attrs": {
+                "builder-data-element": "page-content"
+              }
+            }
+          ]
+        }
+      ],
+      "stylesheets": [],
+      "applyTo": {
+        "routes": [
+          "404"
+        ]
+      }
+    }
+  ],
+  "popups": [],
+  "forms": {
+    "enabled": true,
+    "forms": []
+  },
+  "snippets": [],
+  "collections": {
+    "collections": [],
+    "taxonomies": []
+  },
+  "sources": [],
+  "media": {
+    "collections": [],
+    "assets": {}
+  },
+  "pages": {
+    "index": {
+      "route": "index",
+      "title": "Home",
+      "root": [],
+      "stylesheets": [
+        {
+          "id": "global",
+          "name": "Global",
+          "rules": []
+        }
+      ]
+    }
+  },
+  "emitted": {
+    "src/components/ProbeBtn.astro": "ab17ffe1c8269eea",
+    "src/components/ProbeCard.astro": "f9da831c4dd1935a",
+    "src/components/ProbeCond.astro": "5600ba5a0ce7bdd7",
+    "src/components/ProbeOuter.astro": "f4aca0ab9260ee12",
+    "src/components/sitereal/RichText.astro": "a12b0174aedd1159",
+    "src/layouts/MainLayout.astro": "b19ca08e272a4844",
+    "src/layouts/Template404Layout.astro": "ae088b9e70092dc2",
+    "src/pages/index.astro": "49fa6dfe37ec44df",
+    "src/styles/generated/framework.css": "ed8c373f8f95769a"
+  }
+}

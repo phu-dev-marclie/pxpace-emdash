@@ -1,0 +1,10 @@
+---
+interface Props {
+  label?: string;
+}
+const { label = "New" } = Astro.props;
+---
+<span class="w-badge-pill w-badge-pill--dark" builder-data-element="span">
+  <svg class="w-badge-pill__icon" builder-data-element="svg" aria-hidden="true" viewBox="0 0 24 24"><path d="M12 1.5l2.4 6.6 6.6 2.4-6.6 2.4L12 19.5l-2.4-6.6L3 10.5l6.6-2.4L12 1.5z" fill="currentColor"></path><path d="M19 15.5l.9 2.6 2.6.9-2.6.9-.9 2.6-.9-2.6-2.6-.9 2.6-.9.9-2.6z" fill="currentColor"></path></svg>
+  <span class="w-badge-pill__label" builder-data-element="span">{label}</span>
+</span>

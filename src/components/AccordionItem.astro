@@ -1,0 +1,29 @@
+---
+import SiterealRichText from './sitereal/RichText.astro';
+interface Props {
+  accordionImage?: string;
+  variant?: string;
+  triggerAriaExpanded?: string;
+  title?: string;
+  text?: string;
+  list?: string;
+  showList?: boolean;
+}
+const { accordionImage = "https://xcloud.host/_landing/performance/performance-enterprise.png", variant = "", triggerAriaExpanded = "false", title = "Enterprise-Grade Security", text = "Automated security patching, firewalls and isolation keep every site protected.", list = "<li class=\"w-accordion-item__list-item\">High-frequency CPUs</li><li class=\"w-accordion-item__list-item\">NVMe SSD storage</li><li class=\"w-accordion-item__list-item\">Global data centers</li><li class=\"w-accordion-item__list-item\">Optimized server stacks</li><li class=\"w-accordion-item__list-item\">Intelligent caching</li>", showList = false } = Astro.props;
+---
+<div class={`w-accordion-item ${variant}`} builder-data-element="div" data-accordion-image={accordionImage} data-accordion-item="">
+  <span class="w-accordion-item__bar" builder-data-element="span"></span>
+  <h3 class="w-accordion-item__heading" builder-data-element="heading">
+    <button class="w-accordion-item__trigger" builder-data-element="button" aria-expanded={triggerAriaExpanded} data-accordion-trigger="" type="button">{title}</button>
+  </h3>
+  <div class="w-accordion-item__panel" builder-data-element="div">
+    <div class="w-accordion-item__inner" builder-data-element="div">
+      <p class="w-accordion-item__text" builder-data-element="text">{text}</p>
+      {(showList) && (
+        <>
+          <ul class="w-accordion-item__list" builder-data-element="rich-text"><SiterealRichText html={list} /></ul>
+        </>
+      )}
+    </div>
+  </div>
+</div>

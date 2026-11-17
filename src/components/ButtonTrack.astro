@@ -1,0 +1,13 @@
+---
+interface Props {
+  link?: string;
+  label?: string;
+}
+const { link = "#", label = "Deploy your site" } = Astro.props;
+---
+<a class="w-button-track" builder-data-element="link" href={link}>
+  <span class="w-button-track__tab" builder-data-element="span" aria-hidden="true">
+    <span class="w-button-track__chevrons" builder-data-element="span"></span>
+  </span>
+  <span class="w-button-track__label" builder-data-element="span">{label}</span>
+</a>

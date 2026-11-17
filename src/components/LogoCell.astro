@@ -1,0 +1,17 @@
+---
+interface Props {
+  badge?: string;
+  showBadge?: boolean;
+  logoAlt?: string;
+  logo?: string;
+}
+const { badge = "", showBadge = false, logoAlt = "Dumitru Butucel", logo = "https://xcloud.host/_landing/logofolio/logo-db.png" } = Astro.props;
+---
+<li class="w-logo-cell" builder-data-element="text">
+  {(showBadge) && (
+    <>
+      <span class="w-logo-cell__badge" builder-data-element="span">{badge}</span>
+    </>
+  )}
+  <img class="w-logo-cell__image" builder-data-element="image" alt={logoAlt} src={logo} />
+</li>

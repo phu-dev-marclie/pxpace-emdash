@@ -1,0 +1,11 @@
+---
+interface Props {
+  link?: string;
+  variant?: string;
+  label?: string;
+}
+const { link = "#", variant = "", label = "Login" } = Astro.props;
+---
+<a class={`w-button-secondary ${variant}`} builder-data-element="link" href={link}>
+  <span class="w-button-secondary__label" builder-data-element="span">{label}</span>
+</a>

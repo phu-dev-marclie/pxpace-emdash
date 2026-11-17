@@ -1,0 +1,538 @@
+---
+import Base from '../layouts/PlainBase.astro';
+import MainLayout from '../layouts/MainLayout.astro';
+import BadgeRating from '../components/BadgeRating.astro';
+import Toggle from '../components/Toggle.astro';
+import ButtonPrimary from '../components/ButtonPrimary.astro';
+import ButtonOutline from '../components/ButtonOutline.astro';
+import GlyphMatrix from '../components/GlyphMatrix.astro';
+import LogoCell from '../components/LogoCell.astro';
+import CardHosting from '../components/CardHosting.astro';
+import CardPlan from '../components/CardPlan.astro';
+import TileStack from '../components/TileStack.astro';
+import ButtonText from '../components/ButtonText.astro';
+import CardFeature from '../components/CardFeature.astro';
+import Tag from '../components/Tag.astro';
+import CardSecurity from '../components/CardSecurity.astro';
+import Stat from '../components/Stat.astro';
+import TileAgent from '../components/TileAgent.astro';
+import CardWay from '../components/CardWay.astro';
+import ButtonSecondary from '../components/ButtonSecondary.astro';
+import BadgePill from '../components/BadgePill.astro';
+import AccordionItem from '../components/AccordionItem.astro';
+import TileIntegration from '../components/TileIntegration.astro';
+import CardTestimonial from '../components/CardTestimonial.astro';
+import CardCommunity from '../components/CardCommunity.astro';
+import '../styles/generated/framework.css';
+import '../styles/generated/global.css';
+import '../styles/generated/templates/tpl-mwj2rj4d-1.css';
+import '../styles/generated/pages/index.css';
+---
+<Base title="Home" siteName="PXpace" lang="en">
+  <Fragment slot="head">
+    <link rel="icon" href="/brand/favicon.png" type="image/png" />
+    <meta property="og:locale" content="en" />
+    <meta name="author" content="PXpace" />
+    <script is:inline src="/scripts/snippets/snip-theme-mode-restore.js"></script>
+  </Fragment>
+  <MainLayout>
+    <section class="w-home-hero" builder-data-element="section" data-surface="default" data-brx="section">
+      <div class="w-home-hero__container" builder-data-element="container" data-brx="container">
+        <div class="w-home-hero__copy" builder-data-element="flex" data-brx="block">
+          <BadgeRating link="#" label="4.8 stars | 428+ 5 Star Reviews" />
+          <h1 class="w-home-hero__heading" builder-data-element="heading">
+            <span class="w-heading-2xl" builder-data-element="span">Host Anything.</span>
+            <span class="w-heading-2xl" builder-data-element="span">Scale Infinitely. Manage With</span>
+            <span class="w-home-hero__line-row" builder-data-element="span" data-switch-group="">
+              <span class="w-home-hero__word is-active" builder-data-element="span" data-switch-word="off">Panel</span>
+              <Toggle />
+              <span class="w-home-hero__word w-home-hero__word--agent" builder-data-element="span" data-switch-word="on">AI Agents</span>
+            </span>
+          </h1>
+          <p class="w-text-m" builder-data-element="text">Deploy WordPress, WooCommerce, Laravel, Node.js, n8n, AI tools, and more from one platform. Launch on your own cloud provider or fully managed PXpace servers in minutes, protected and patched for you.</p>
+        </div>
+        <div class="w-home-hero__actions" builder-data-element="flex" data-brx="block">
+          <ButtonPrimary link="#" label="Join for free" />
+          <ButtonOutline link="#" label="Deploy" showIcon={false} />
+        </div>
+      </div>
+      <div class="w-home-hero__visual" builder-data-element="container" data-brx="container">
+        <img class="w-home-hero__background" builder-data-element="image" alt="" src="https://xcloud.host/_landing/hero/hero-bg-1.png" />
+        <GlyphMatrix />
+        <img class="w-home-hero__illustration" builder-data-element="image" alt="PXpace site dashboard" src="https://xcloud.host/_landing/hero/hero-illustration-sitedashboard.png" />
+        <div class="w-home-hero__fade" builder-data-element="div" data-brx="div"></div>
+      </div>
+    </section>
+    <section class="w-logos" builder-data-element="section" data-surface="default" data-brx="section">
+      <div class="w-logos__container" builder-data-element="container" data-brx="container">
+        <p class="w-logos__intro" builder-data-element="text">Trusted by <strong>100,000+</strong> businesses and brands worldwide.</p>
+      </div>
+      <div class="w-logos__band" builder-data-element="container" data-brx="container">
+        <div class="w-logos__viewport" builder-data-element="div" data-brx="div">
+          <ul class="w-logos__track" builder-data-element="list" data-marquee="">
+            <LogoCell showBadge={false} logoAlt="Dumitru Butucel" logo="https://xcloud.host/_landing/logofolio/logo-db.png" />
+            <LogoCell showBadge={false} logoAlt="stackhaus" logo="https://xcloud.host/_landing/logofolio/logo-stackhause.png" />
+            <LogoCell badge="• Case Study" showBadge logoAlt="Kevin Heinrichs" logo="https://xcloud.host/_landing/logofolio/logo-kevin.png" />
+            <LogoCell badge="• Case Study" showBadge logoAlt="Cloud Nine Web" logo="https://xcloud.host/_landing/logofolio/logo-cloudenineweb.png" />
+            <LogoCell badge="• Case Study" showBadge logoAlt="Newman Web Solutions" logo="https://xcloud.host/_landing/logofolio/logo-newman.png" />
+            <LogoCell showBadge={false} logoAlt="Advanced Web Strategies" logo="https://xcloud.host/_landing/logofolio/logo-advancedwebstrategies.png" />
+            <LogoCell showBadge={false} logoAlt="En Busca del Fuego" logo="https://xcloud.host/_landing/logofolio/logo-enbusca.png" />
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="w-hosting" builder-data-element="section" data-surface="default" data-brx="section">
+      <div class="w-hosting__container" builder-data-element="container" data-animate="" data-brx="container">
+        <header class="w-hosting__head" builder-data-element="flex" data-brx="block">
+          <h2 class="w-heading-xl" builder-data-element="heading">What Do You Want to Host?</h2>
+          <p class="w-text-l" builder-data-element="text">Pick what you are building. PXpace sets up the server for it, keeps it updated and backed up, and you manage everything from one dashboard.</p>
+        </header>
+        <ul class="w-hosting__grid" builder-data-element="list">
+          <li class="w-hosting__item" builder-data-element="text" data-stagger="">
+            <CardHosting link="#" plate={"<span class=\"w-card-hosting__logo\"><img alt=\"\" class=\"w-card-hosting__logo-image\" src=\"https://xcloud.host/_landing/home/hosting-types/wordpress.svg\"/></span><span class=\"w-card-hosting__logo\"><img alt=\"\" class=\"w-card-hosting__logo-image\" src=\"https://xcloud.host/_landing/home/hosting-types/woocommerce.svg\"/></span>"} label="WordPress Hosting" title="Fast, Safe WordPress and WooCommerce" text="Caching, backups and SSL are ready from day one. Update plugins safely, with a backup first and a compatibility check." chips={"<sitereal-component data-component=\"cmp-chip\" data-name=\"Chip\" data-props='{\"label\": \"Safe updates\"}'></sitereal-component><sitereal-component data-component=\"cmp-chip\" data-name=\"Chip\" data-props='{\"label\": \"Daily backups\"}'></sitereal-component><sitereal-component data-component=\"cmp-chip\" data-name=\"Chip\" data-props='{\"label\": \"Free SSL\"}'></sitereal-component>"} linkLabel="WordPress hosting" />
+          </li>
+          <li class="w-hosting__item" builder-data-element="text" data-stagger="">
+            <CardHosting link="#" plate={"<span class=\"w-card-hosting__logo\"><img alt=\"\" class=\"w-card-hosting__logo-image\" src=\"https://xcloud.host/_landing/home/hosting-types/nodejs.svg\"/></span><span class=\"w-card-hosting__logo\"><img alt=\"\" class=\"w-card-hosting__logo-image\" src=\"https://xcloud.host/_landing/home/hosting-types/nextjs.svg\"/></span><span class=\"w-card-hosting__logo\"><img alt=\"\" class=\"w-card-hosting__logo-image\" src=\"https://xcloud.host/_landing/home/hosting-types/nuxt-js.svg\"/></span><span class=\"w-card-hosting__logo\"><img alt=\"\" class=\"w-card-hosting__logo-image\" src=\"https://xcloud.host/_landing/home/hosting-types/astro.svg\"/></span>"} label="Node.js Hosting" title="Deploy JavaScript Apps From Git" text="Next.js, Nuxt, Astro, Express and more. Push your code and PXpace builds it, runs it and keeps it running." chips={"<sitereal-component data-component=\"cmp-chip\" data-name=\"Chip\" data-props='{\"label\": \"Deploy on push\"}'></sitereal-component><sitereal-component data-component=\"cmp-chip\" data-name=\"Chip\" data-props='{\"label\": \"Zero-downtime deploys\"}'></sitereal-component>"} linkLabel="Node.js hosting" />
+          </li>
+          <li class="w-hosting__item" builder-data-element="text" data-stagger="">
+            <CardHosting link="#" plate={"<span class=\"w-card-hosting__logo\"><img alt=\"\" class=\"w-card-hosting__logo-image\" src=\"https://xcloud.host/_landing/home/hosting-types/docker.svg\"/></span><span class=\"w-card-hosting__logo\"><img alt=\"\" class=\"w-card-hosting__logo-image\" src=\"https://xcloud.host/_landing/home/hosting-types/docker-compose.png\"/></span>"} label="Docker Hosting" title="Run Any App in a Container" text="Bring a Dockerfile or a Docker Compose file. It runs on the same server as your other sites, with its own domain and SSL." chips={"<sitereal-component data-component=\"cmp-chip\" data-name=\"Chip\" data-props='{\"label\": \"Docker Compose\"}'></sitereal-component><sitereal-component data-component=\"cmp-chip\" data-name=\"Chip\" data-props='{\"label\": \"Same server as your sites\"}'></sitereal-component>"} linkLabel="Docker hosting" />
+          </li>
+          <li class="w-hosting__item" builder-data-element="text" data-stagger="">
+            <CardHosting link="#" plate={"<span class=\"w-card-hosting__logo\"><img alt=\"\" class=\"w-card-hosting__logo-image\" src=\"https://xcloud.host/_landing/one-click-app/laravel.svg\"/></span><span class=\"w-card-hosting__logo\"><img alt=\"\" class=\"w-card-hosting__logo-image\" src=\"https://xcloud.host/_landing/home/hosting-types/php.svg\"/></span><span class=\"w-card-hosting__logo\"><img alt=\"\" class=\"w-card-hosting__logo-image\" src=\"https://xcloud.host/_landing/home/hosting-types/statamic.svg\"/></span><span class=\"w-card-hosting__logo\"><img alt=\"\" class=\"w-card-hosting__logo-image\" src=\"https://xcloud.host/_landing/home/hosting-types/drupal.svg\"/></span>"} label="PHP & Laravel Hosting" title="Laravel and PHP Apps, Ready to Run" text="Laravel, Statamic, Drupal and other PHP apps. Composer, queues, the scheduler and Horizon are set up for you. Deploy from Git and pick your PHP version." chips={"<sitereal-component data-component=\"cmp-chip\" data-name=\"Chip\" data-props='{\"label\": \"Queues and scheduler\"}'></sitereal-component><sitereal-component data-component=\"cmp-chip\" data-name=\"Chip\" data-props='{\"label\": \"Deploy from Git\"}'></sitereal-component>"} linkLabel="Laravel hosting" />
+          </li>
+          <li class="w-hosting__item" builder-data-element="text" data-stagger="">
+            <CardHosting link="#" plate={"<span class=\"w-card-hosting__logo\"><img alt=\"\" class=\"w-card-hosting__logo-image\" src=\"https://xcloud.host/_landing/home/hosting-types/n8n.svg\"/></span><span class=\"w-card-hosting__logo\"><img alt=\"\" class=\"w-card-hosting__logo-image\" src=\"https://xcloud.host/_landing/home/hosting-types/nextcloud.svg\"/></span><span class=\"w-card-hosting__logo\"><img alt=\"\" class=\"w-card-hosting__logo-image\" src=\"https://xcloud.host/_landing/home/hosting-types/uptime-kuma.svg\"/></span><span class=\"w-card-hosting__logo\"><img alt=\"\" class=\"w-card-hosting__logo-image\" src=\"https://xcloud.host/_landing/home/hosting-types/supabase.svg\"/></span>"} label="One-Click Apps" title="1,000+ Open-Source Apps in One Click" text="n8n, Nextcloud, Uptime Kuma, Supabase and many more. Pick an app, and it is installed and online in minutes." chips={"<sitereal-component data-component=\"cmp-chip\" data-name=\"Chip\" data-props='{\"label\": \"Installed for you\"}'></sitereal-component><sitereal-component data-component=\"cmp-chip\" data-name=\"Chip\" data-props='{\"label\": \"Backups included\"}'></sitereal-component>"} linkLabel="Browse one-click apps" />
+          </li>
+          <li class="w-hosting__item" builder-data-element="text" data-stagger="">
+            <CardHosting link="#" plate={"<span class=\"w-card-hosting__logo\"><img alt=\"\" class=\"w-card-hosting__logo-image\" src=\"https://xcloud.host/_landing/home/hosting-types/openclaw.svg\"/></span><span class=\"w-card-hosting__logo\"><img alt=\"\" class=\"w-card-hosting__logo-image\" src=\"https://xcloud.host/_landing/home/hosting-types/hermes.svg\"/></span><span class=\"w-card-hosting__logo\"><img alt=\"\" class=\"w-card-hosting__logo-image\" src=\"https://xcloud.host/_landing/home/hosting-types/paperclip.svg\"/></span><span class=\"w-card-hosting__logo\"><img alt=\"\" class=\"w-card-hosting__logo-image\" src=\"https://xcloud.host/_landing/home/hosting-types/deepseek.svg\"/></span>"} label="AI Agent Hosting" title="Your Own AI Agents, Always On" text="Run OpenClaw, Hermes, Paperclip, DeepSeek Harness and other AI agents on a server that stays online, from $24.99/month." chips={"<sitereal-component data-component=\"cmp-chip\" data-name=\"Chip\" data-props='{\"label\": \"Always online\"}'></sitereal-component><sitereal-component data-component=\"cmp-chip\" data-name=\"Chip\" data-props='{\"label\": \"Set up for you\"}'></sitereal-component>"} linkLabel="AI agent hosting" />
+          </li>
+        </ul>
+        <p class="w-hosting__note" builder-data-element="text">
+          Every one of these runs on a PXpace Managed server from $5/month, or on your own server through the same panel. Your first own server is free.{' '}
+          <a class="w-hosting__note-link" builder-data-element="link" href="#">Choose how you want to host</a>
+        </p>
+      </div>
+    </section>
+    <section class="w-plans" builder-data-element="section" data-surface="default" data-brx="section">
+      <div class="w-plans__container" builder-data-element="container" data-animate="" data-brx="container">
+        <header class="w-plans__head" builder-data-element="flex" data-brx="block">
+          <h2 class="w-heading-xl" builder-data-element="heading">Choose How You Want To Host</h2>
+          <p class="w-text-m" builder-data-element="text">From small startups to enterprises, PXpace is built to support your growth. Choose the plan that suits you best with affordable plans and pricing.</p>
+        </header>
+        <div class="w-plans__cards" builder-data-element="div" data-brx="div">
+          <CardPlan image="https://xcloud.host/_landing/pricing/pricing-xcloud.png" title="PXpace Hosting" description="Fully managed hosting for dynamic, high-traffic sites, with automated daily backups and easy scaling built to deliver high-performance websites." features={"<li class=\"w-card-plan__feature\"><svg aria-hidden=\"true\" class=\"w-card-plan__check\" viewbox=\"0 0 16 16\"><path d=\"M3.33 8l3.33 3.33 6.67-6.66\" fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.33\"></path></svg>Fully managed server setup</li><li class=\"w-card-plan__feature\"><svg aria-hidden=\"true\" class=\"w-card-plan__check\" viewbox=\"0 0 16 16\"><path d=\"M3.33 8l3.33 3.33 6.67-6.66\" fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.33\"></path></svg>Optimized hosting stack</li><li class=\"w-card-plan__feature\"><svg aria-hidden=\"true\" class=\"w-card-plan__check\" viewbox=\"0 0 16 16\"><path d=\"M3.33 8l3.33 3.33 6.67-6.66\" fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.33\"></path></svg>Daily automated backups</li><li class=\"w-card-plan__feature\"><svg aria-hidden=\"true\" class=\"w-card-plan__check\" viewbox=\"0 0 16 16\"><path d=\"M3.33 8l3.33 3.33 6.67-6.66\" fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.33\"></path></svg>Free SSL and renewal</li><li class=\"w-card-plan__feature\"><svg aria-hidden=\"true\" class=\"w-card-plan__check\" viewbox=\"0 0 16 16\"><path d=\"M3.33 8l3.33 3.33 6.67-6.66\" fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.33\"></path></svg>Support from expert engineers</li>"}>
+            <ButtonPrimary link="#" variant="w-button-primary--block" label="View the Plans" />
+          </CardPlan>
+          <CardPlan image="https://xcloud.host/_landing/pricing/pricing-selfmanaged.png" title="Self-Managed Hosting" description="Bring your own server and connect it to the PXpace panel for easier server management, with every feature you need available under a single, unified dashboard." features={"<li class=\"w-card-plan__feature\"><svg aria-hidden=\"true\" class=\"w-card-plan__check\" viewbox=\"0 0 16 16\"><path d=\"M3.33 8l3.33 3.33 6.67-6.66\" fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.33\"></path></svg>Bring your own server, manage it from one dashboard</li><li class=\"w-card-plan__feature\"><svg aria-hidden=\"true\" class=\"w-card-plan__check\" viewbox=\"0 0 16 16\"><path d=\"M3.33 8l3.33 3.33 6.67-6.66\" fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.33\"></path></svg>Free: 1 server and 10 sites included</li><li class=\"w-card-plan__feature\"><svg aria-hidden=\"true\" class=\"w-card-plan__check\" viewbox=\"0 0 16 16\"><path d=\"M3.33 8l3.33 3.33 6.67-6.66\" fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.33\"></path></svg>Connect any VPS to the PXpace panel</li><li class=\"w-card-plan__feature\"><svg aria-hidden=\"true\" class=\"w-card-plan__check\" viewbox=\"0 0 16 16\"><path d=\"M3.33 8l3.33 3.33 6.67-6.66\" fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.33\"></path></svg>Every feature under one dashboard</li><li class=\"w-card-plan__feature\"><svg aria-hidden=\"true\" class=\"w-card-plan__check\" viewbox=\"0 0 16 16\"><path d=\"M3.33 8l3.33 3.33 6.67-6.66\" fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.33\"></path></svg>Unlimited apps and databases</li>"}>
+            <ButtonOutline link="#" variant="w-button-outline--block" label="Connect Your Own Server" showIcon />
+          </CardPlan>
+          <CardPlan image="https://xcloud.host/_landing/pricing/pricing-managedbilling.png" title="Reseller Hosting" description="Sell hosting under your own brand. Resell on PXpace servers or bring your own, with full white-label control, built-in client management, and billing handled for you." features={"<li class=\"w-card-plan__feature\"><svg aria-hidden=\"true\" class=\"w-card-plan__check\" viewbox=\"0 0 16 16\"><path d=\"M3.33 8l3.33 3.33 6.67-6.66\" fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.33\"></path></svg>Resell on PXpace servers or your own</li><li class=\"w-card-plan__feature\"><svg aria-hidden=\"true\" class=\"w-card-plan__check\" viewbox=\"0 0 16 16\"><path d=\"M3.33 8l3.33 3.33 6.67-6.66\" fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.33\"></path></svg>100% white-label — your domain and logo</li><li class=\"w-card-plan__feature\"><svg aria-hidden=\"true\" class=\"w-card-plan__check\" viewbox=\"0 0 16 16\"><path d=\"M3.33 8l3.33 3.33 6.67-6.66\" fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.33\"></path></svg>Built-in client and account management</li><li class=\"w-card-plan__feature\"><svg aria-hidden=\"true\" class=\"w-card-plan__check\" viewbox=\"0 0 16 16\"><path d=\"M3.33 8l3.33 3.33 6.67-6.66\" fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.33\"></path></svg>Create custom packages and set your prices</li><li class=\"w-card-plan__feature\"><svg aria-hidden=\"true\" class=\"w-card-plan__check\" viewbox=\"0 0 16 16\"><path d=\"M3.33 8l3.33 3.33 6.67-6.66\" fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"1.33\"></path></svg>Automated billing and invoicing</li>"}>
+            <ButtonOutline link="#" variant="w-button-outline--block" label="Start Reselling" showIcon />
+          </CardPlan>
+        </div>
+      </div>
+    </section>
+    <section class="w-stack" builder-data-element="section" data-surface="default" data-brx="section">
+      <div class="w-stack__container" builder-data-element="container" data-brx="container">
+        <div class="w-stack__intro" builder-data-element="flex" data-brx="block">
+          <p class="w-stack__title" builder-data-element="text">Bring the stack you already use</p>
+          <p class="w-stack__description" builder-data-element="text">Runtime, SSL and domain are configured before your first deploy.</p>
+          <img class="w-stack__dots" builder-data-element="image" alt="" src="https://xcloud.host/_landing/tech-stack/dot-pattern.svg" />
+        </div>
+        <div class="w-stack__rows" builder-data-element="div" data-brx="div">
+          <div class="w-stack__row" builder-data-element="div" data-brx="div">
+            <div class="w-stack__track" builder-data-element="div" data-marquee="">
+              <TileStack icon="https://xcloud.host/_landing/tech-stack/laravel.svg" label="Laravel" />
+              <TileStack icon="https://xcloud.host/_landing/tech-stack/docker.svg" label="Docker" />
+              <TileStack icon="https://xcloud.host/_landing/tech-stack/nodejs.svg" label="Node" />
+              <TileStack icon="https://xcloud.host/_landing/tech-stack/nextjs.svg" label="Next.js" />
+              <TileStack icon="https://xcloud.host/_landing/tech-stack/astro.svg" label="Astro" />
+              <TileStack icon="https://xcloud.host/_landing/tech-stack/react.svg" label="React" />
+              <TileStack icon="https://xcloud.host/_landing/tech-stack/vite.svg" label="Vite" />
+              <TileStack icon="https://xcloud.host/_landing/tech-stack/svelte.svg" label="Svelte" />
+            </div>
+          </div>
+          <span class="w-stack__rule" builder-data-element="span"></span>
+          <div class="w-stack__row" builder-data-element="div" data-brx="div">
+            <div class="w-stack__track w-stack__track--reverse" builder-data-element="div" data-marquee="">
+              <TileStack icon="https://xcloud.host/_landing/tech-stack/django.svg" label="Django" />
+              <TileStack icon="https://xcloud.host/_landing/tech-stack/bun.svg" label="Bun" />
+              <TileStack icon="https://xcloud.host/_landing/tech-stack/python.svg" label="Python" />
+              <TileStack icon="https://xcloud.host/_landing/tech-stack/redis.svg" label="Redis" />
+              <TileStack icon="https://xcloud.host/_landing/tech-stack/postgres.svg" label="Postgres" />
+              <TileStack icon="https://xcloud.host/_landing/tech-stack/go.svg" label="Go" />
+              <TileStack icon="https://xcloud.host/_landing/tech-stack/rust.svg" label="Rust" />
+              <TileStack icon="https://xcloud.host/_landing/tech-stack/ruby.svg" label="Ruby" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="w-features" builder-data-element="section" data-surface="default" data-brx="section">
+      <div class="w-features__container" builder-data-element="container" data-brx="container">
+        <header class="w-features__head" builder-data-element="flex" data-animate="" data-brx="block">
+          <h2 class="w-heading-xl" builder-data-element="heading">A <span class="w-highlight">Modern</span> &amp; <span class="w-highlight">User-Friendly</span> Control Panel You Can Rely On</h2>
+          <p class="w-text-m" builder-data-element="text">Manage servers, applications, databases, teams, backups, deployments, and security from one intuitive dashboard.</p>
+          <ButtonText link="#" label="View all features" showIcon />
+        </header>
+        <div class="w-features__grid" builder-data-element="div" data-brx="div">
+          <div class="w-features__row" builder-data-element="div" data-brx="div">
+            <CardFeature link="#" title="Updates Manager" description="Every plugin, theme and core update across all your sites and servers, in one list. No separate maintenance tool, no maintenance plugin on each site and no per-site fee. Included in PRO." content={"\n<div class=\"w-mock__bar\"><span class=\"w-mock__dots\"><span class=\"w-mock__dot\"></span><span class=\"w-mock__dot w-mock__dot--yellow\"></span><span class=\"w-mock__dot w-mock__dot--green\"></span></span><span class=\"w-mock__title\">Updates Manager</span></div>\n<div class=\"w-mock__row\"><span class=\"w-chip\">Plugins 24</span><span class=\"w-mock__tab\">Themes 6</span><span class=\"w-mock__tab\">WordPress Core 3</span></div>\n<div class=\"w-mock__row\"><span class=\"w-mock__icon\"></span><span class=\"w-mock__name\">WooCommerce<span class=\"w-mock__meta\">8 Sites</span></span><span class=\"w-pill w-pill--success\">Update Available</span></div>\n<div class=\"w-mock__row\"><span class=\"w-mock__icon\"></span><span class=\"w-mock__name\">Yoast SEO<span class=\"w-mock__meta\">4 Sites</span></span><span class=\"w-pill w-pill--success\">Update Available</span></div>\n<div class=\"w-mock__row\"><span class=\"w-mock__icon\"></span><span class=\"w-mock__name\">Elementor Pro<span class=\"w-mock__meta\">2 Sites</span></span><span class=\"w-pill w-pill--warning\">Licence needed</span></div>\n<div class=\"w-mock__row\"><span class=\"w-mock__icon\"></span><span class=\"w-mock__name\">Page Builder<span class=\"w-mock__meta\">Needs PHP 8.1</span></span><span class=\"w-pill w-pill--warning\">Not compatible</span></div>\n"} />
+            <CardFeature link="#" title="Team Management" description="Manage multiple teams and projects from one dashboard. Easily add members, assign roles, and control permissions so that everyone has the right access." mockVariant="w-card-feature__mock--narrow" content={"\n<div class=\"w-mock__bar\"><span class=\"w-mock__dots\"><span class=\"w-mock__dot\"></span><span class=\"w-mock__dot w-mock__dot--yellow\"></span><span class=\"w-mock__dot w-mock__dot--green\"></span></span><span class=\"w-mock__title\">User Role</span></div>\n<div class=\"w-mock__row\"><span class=\"w-mock__name\">Team Admin</span><span class=\"w-pill w-pill--success\">Selected</span></div>\n<div class=\"w-mock__row\"><span class=\"w-mock__name w-mock__name--muted\">Server Admin</span><span class=\"w-mock__skeleton w-mock__skeleton--short\"></span></div>\n<div class=\"w-mock__row\"><span class=\"w-mock__name w-mock__name--muted\">Site Admin</span><span class=\"w-mock__skeleton w-mock__skeleton--short\"></span></div>\n"} />
+          </div>
+          <div class="w-features__row w-features__row--full" builder-data-element="div" data-brx="div">
+            <a class="w-features__stack" builder-data-element="link" href="#">
+              <div class="w-features__stack-text" builder-data-element="flex" data-brx="block">
+                <div class="w-features__stack-copy" builder-data-element="flex" data-brx="block">
+                  <h3 class="w-features__stack-title" builder-data-element="heading">Support for All the Stacks You Need</h3>
+                  <p class="w-features__stack-description" builder-data-element="text">Every server comes ready for WordPress, PHP, Node.js and Docker apps. PXpace sets up and tunes the web server (NGINX or OpenLiteSpeed) and the database (MySQL or MariaDB) for you.</p>
+                </div>
+              </div>
+              <div class="w-features__diagram" builder-data-element="div" aria-hidden="true" data-brx="div">
+                <svg class="w-features__diagram-wires" builder-data-element="svg" fill="none" viewBox="0 0 592 360"><defs><lineargradient gradientUnits="userSpaceOnUse" id="w-features-flow" x1="200" x2="300" y1="0" y2="0"><stop offset="0" stop-color="#1570EF" stop-opacity=".22"></stop><stop offset=".45" stop-color="#1570EF" stop-opacity=".62"></stop><stop offset="1" stop-color="#1570EF" stop-opacity=".95"></stop></lineargradient></defs><path class="w-features__diagram-tree" d="M300,54 H258 Q250,54 250,62 V298 Q250,306 258,306 H300 M250,138 H300 M250,222 H300 M200,180 H250" stroke-linecap="round" stroke-width="1.5"></path><path class="w-features__diagram-flow" d="M200,180 H242 Q250,180 250,172 V62 Q250,54 258,54 H300" stroke-linecap="round" stroke-width="1.5"></path></svg>
+                <span class="w-features__diagram-pill" builder-data-element="span">Choose Web Server</span>
+                <span class="w-features__diagram-hub" builder-data-element="span">
+                  <svg class="w-icon w-icon--md" builder-data-element="svg" aria-hidden="true" viewBox="0 0 24 24"><path d="M13.5 3 5.5 13.2c-.3.4 0 .9.5.9H11l-.6 6.9c0 .5.6.7.9.3l8-10.2c.3-.4 0-.9-.5-.9H13.4l.6-6.9c0-.5-.6-.7-.9-.3Z" fill="currentColor"></path></svg>
+                </span>
+                <div class="w-features__diagram-card w-features__diagram-card--first" builder-data-element="div" data-brx="div">
+                  <span class="w-features__diagram-mark" builder-data-element="span">
+                    <img class="w-features__diagram-logo" builder-data-element="image" alt="" src="https://xcloud.host/_landing/features/stack/nginx.svg" />
+                  </span>
+                  <span class="w-features__diagram-body" builder-data-element="span">
+                    <span class="w-features__diagram-name" builder-data-element="span">NGINX</span>
+                    <span class="w-features__diagram-description" builder-data-element="span">High-performance web server and reverse proxy.</span>
+                  </span>
+                  <span class="w-features__diagram-radio" builder-data-element="span"></span>
+                </div>
+                <div class="w-features__diagram-card w-features__diagram-card--second" builder-data-element="div" data-brx="div">
+                  <span class="w-features__diagram-mark" builder-data-element="span">
+                    <img class="w-features__diagram-logo" builder-data-element="image" alt="" src="https://xcloud.host/_landing/one-click-app/openclaw.svg" />
+                  </span>
+                  <span class="w-features__diagram-body" builder-data-element="span">
+                    <span class="w-features__diagram-name" builder-data-element="span">Agentic</span>
+                    <span class="w-features__diagram-rows" builder-data-element="span">
+                      <span class="w-features__diagram-skeleton" builder-data-element="span"></span>
+                      <span class="w-features__diagram-skeleton" builder-data-element="span"></span>
+                    </span>
+                  </span>
+                  <span class="w-features__diagram-radio" builder-data-element="span"></span>
+                </div>
+                <div class="w-features__diagram-card w-features__diagram-card--third" builder-data-element="div" data-brx="div">
+                  <span class="w-features__diagram-mark" builder-data-element="span">
+                    <img class="w-features__diagram-logo" builder-data-element="image" alt="" src="https://xcloud.host/_landing/features/stack/openlitespeed.png" />
+                  </span>
+                  <span class="w-features__diagram-body" builder-data-element="span">
+                    <span class="w-features__diagram-name" builder-data-element="span">OpenLiteSpeed</span>
+                    <span class="w-features__diagram-rows" builder-data-element="span">
+                      <span class="w-features__diagram-skeleton" builder-data-element="span"></span>
+                      <span class="w-features__diagram-skeleton" builder-data-element="span"></span>
+                    </span>
+                  </span>
+                  <span class="w-features__diagram-radio" builder-data-element="span"></span>
+                </div>
+                <div class="w-features__diagram-card w-features__diagram-card--fourth" builder-data-element="div" data-brx="div">
+                  <span class="w-features__diagram-mark" builder-data-element="span">
+                    <img class="w-features__diagram-logo" builder-data-element="image" alt="" src="https://xcloud.host/_landing/home/hosting-types/docker.svg" />
+                  </span>
+                  <span class="w-features__diagram-body" builder-data-element="span">
+                    <span class="w-features__diagram-name" builder-data-element="span">Docker</span>
+                    <span class="w-features__diagram-rows" builder-data-element="span">
+                      <span class="w-features__diagram-skeleton" builder-data-element="span"></span>
+                      <span class="w-features__diagram-skeleton" builder-data-element="span"></span>
+                    </span>
+                  </span>
+                  <span class="w-features__diagram-radio" builder-data-element="span"></span>
+                </div>
+              </div>
+              <svg class="w-features__stack-arrow" builder-data-element="svg" aria-hidden="true" viewBox="0 0 18 18"><path d="M6.75 4.5 11.25 9l-4.5 4.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg>
+            </a>
+          </div>
+          <div class="w-features__row w-features__row--thirds" builder-data-element="div" data-brx="div">
+            <CardFeature link="#" title="Site Security PRO" description="Stay protected with automated virtual patching and early threat detection that blocks vulnerabilities before they're exploited." content={"<div class=\"w-mock__bar\"><span class=\"w-mock__dots\"><span class=\"w-mock__dot\"></span><span class=\"w-mock__dot w-mock__dot--yellow\"></span><span class=\"w-mock__dot w-mock__dot--green\"></span></span><span class=\"w-mock__title\">Powered By Patchstack</span></div><div class=\"w-mock__row\"><span class=\"w-mock__name\">TestPortal</span><span class=\"w-mock__skeleton w-mock__skeleton--medium\"></span></div><div class=\"w-mock__row\"><span class=\"w-mock__name w-mock__name--muted\">SiteSandbox</span><span class=\"w-mock__skeleton w-mock__skeleton--medium\"></span></div><div class=\"w-mock__row\"><span class=\"w-mock__name w-mock__name--muted\">Cloudify</span><span class=\"w-mock__skeleton w-mock__skeleton--medium\"></span></div>"} />
+            <CardFeature link="#" title="Cloudflare Enterprise CDN" description="Cache full pages at the edge in 330+ cities, with managed WAF and DDoS protection. $5 per domain per month." content={"<div class=\"w-mock__bar\"><span class=\"w-mock__dots\"><span class=\"w-mock__dot\"></span><span class=\"w-mock__dot w-mock__dot--yellow\"></span><span class=\"w-mock__dot w-mock__dot--green\"></span></span><span class=\"w-mock__title\">Cloudflare Enterprise</span></div><div class=\"w-mock__row\"><span class=\"w-mock__name\">TestPortal</span><span class=\"w-pill w-pill--success\">Enabled</span></div><div class=\"w-mock__row\"><span class=\"w-mock__name w-mock__name--muted\">SiteSandbox</span><span class=\"w-pill w-pill--success\">Enabled</span></div><div class=\"w-mock__row\"><span class=\"w-mock__name w-mock__name--muted\">Cloudify</span><span class=\"w-pill w-pill--success\">Enabled</span></div>"} />
+            <CardFeature link="#" title="PXpace MailBox" description="Upgrade your business with professional email on your own domain - credible, secure, and easy to manage." content={"<div class=\"w-mock__bar\"><span class=\"w-mock__dots\"><span class=\"w-mock__dot\"></span><span class=\"w-mock__dot w-mock__dot--yellow\"></span><span class=\"w-mock__dot w-mock__dot--green\"></span></span><span class=\"w-mock__title\">Mail box</span></div><div class=\"w-mock__row\"><span class=\"w-mock__name\">Inbox</span><span class=\"w-mock__skeleton w-mock__skeleton--long\"></span></div><div class=\"w-mock__row\"><span class=\"w-mock__name w-mock__name--muted\">Draft</span><span class=\"w-mock__skeleton w-mock__skeleton--medium\"></span></div><div class=\"w-mock__row\"><span class=\"w-mock__name w-mock__name--muted\">Sent</span><span class=\"w-mock__skeleton w-mock__skeleton--short\"></span></div>"} />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="w-security" builder-data-element="section" data-surface="night" data-brx="section">
+      <div class="w-security__container" builder-data-element="container" data-animate="" data-brx="container">
+        <header class="w-security__head" builder-data-element="flex" data-brx="block">
+          <div class="w-security__headline" builder-data-element="flex" data-brx="block">
+            <p class="w-eyebrow" builder-data-element="text">Security</p>
+            <h2 class="w-heading-l" builder-data-element="heading">
+              Security That Doesn't{' '}
+              <span class="w-highlight" builder-data-element="span">Wait for You</span>
+            </h2>
+          </div>
+          <p class="w-text-m" builder-data-element="text">When a vulnerability is disclosed in Linux, PHP or WordPress, we protect every server connected to PXpace, PXpace Managed and Self-managed, often before the official fix exists. Then we patch it.</p>
+        </header>
+        <div class="w-security__body" builder-data-element="div" data-brx="div">
+          <div class="w-security__record" builder-data-element="flex" data-brx="block">
+            <h3 class="w-security__record-title" builder-data-element="heading">Security response record</h3>
+            <ul class="w-security__record-list" builder-data-element="list">
+              <li class="w-security__record-item" builder-data-element="text">
+                <a class="w-security__record-link" builder-data-element="link" href="#">
+                  <span class="w-security__record-top" builder-data-element="span">
+                    <span class="w-security__record-name" builder-data-element="span">Linux kernel TCP vulnerability</span>
+                  </span>
+                  <span class="w-security__record-chip" builder-data-element="span">Protected 11 days before Ubuntu's official fix</span>
+                  <span class="w-security__record-meta" builder-data-element="span">Linux kernel · Oct 2026</span>
+                </a>
+              </li>
+              <li class="w-security__record-item" builder-data-element="text">
+                <a class="w-security__record-link" builder-data-element="link" href="#">
+                  <span class="w-security__record-top" builder-data-element="span">
+                    <span class="w-security__record-name" builder-data-element="span">MariaDB security update</span>
+                  </span>
+                  <span class="w-security__record-chip" builder-data-element="span">Patched in stages, with 72 hours' notice</span>
+                  <span class="w-security__record-meta" builder-data-element="span">Database · Oct 2026</span>
+                </a>
+              </li>
+              <li class="w-security__record-item" builder-data-element="text">
+                <a class="w-security__record-link" builder-data-element="link" href="#">
+                  <span class="w-security__record-top" builder-data-element="span">
+                    <span class="w-security__record-name" builder-data-element="span">PHP session upload progress</span>
+                    <Tag />
+                  </span>
+                  <span class="w-security__record-chip" builder-data-element="span">Protected 2 days before it was disclosed</span>
+                  <span class="w-security__record-meta" builder-data-element="span">PHP · Oct 2026</span>
+                </a>
+              </li>
+              <li class="w-security__record-item" builder-data-element="text">
+                <a class="w-security__record-link" builder-data-element="link" href="#">
+                  <span class="w-security__record-top" builder-data-element="span">
+                    <span class="w-security__record-name" builder-data-element="span">PHP2Shell</span>
+                    <Tag />
+                  </span>
+                  <span class="w-security__record-chip" builder-data-element="span">Temporary fix 8 hours before PHP's official fix, patched the same day</span>
+                  <span class="w-security__record-meta" builder-data-element="span">PHP · Oct 2026</span>
+                </a>
+              </li>
+            </ul>
+            <a class="w-security__record-more" builder-data-element="link" href="#">
+              <span class="w-security__record-more-label" builder-data-element="span">See the full record →</span>
+            </a>
+          </div>
+          <div class="w-security__cards" builder-data-element="div" data-brx="div">
+            <CardSecurity label="SERVER" title="Locked down from day one" link="Firewall rules" link2="Automatic security updates" link3="Temporary fixes and patches for you" link4="Backups in two places" />
+            <CardSecurity label="WEB" title="Attacks stopped at the door" link="Built-in firewall (7G/8G)" link2="Cloudflare WAF" link3="AI bot blocker" link4="Security headers" />
+            <CardSecurity label="WORDPRESS" title="Known vulnerabilities fixed first" link="Vulnerability scanner" link2="Site Security PRO" link3="Login protection" link4="File change alerts" />
+            <CardSecurity label="YOU AND YOUR TEAM" title="One place to see it all" link="Security Center" link2="Two-factor sign-in" link3="Team roles" link4="Free SSL" />
+          </div>
+        </div>
+        <div class="w-security__foot" builder-data-element="flex" data-brx="block">
+          <div class="w-security__actions" builder-data-element="flex" data-brx="block">
+            <ButtonPrimary link="#" label="How we secure your servers" />
+            <ButtonOutline link="#" label="Security response record" showIcon />
+          </div>
+          <div class="w-security__stats" builder-data-element="flex" data-brx="block">
+            <Stat value="8 h" label="PHP2Shell temporary fix, live before PHP's official fix" />
+            <Stat value="11 days" label="Kernel TCP protection, before Ubuntu's official fix" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="w-agents" builder-data-element="section" data-surface="default" data-brx="section">
+      <div class="w-agents__container" builder-data-element="container" data-brx="container">
+        <header class="w-agents__head" builder-data-element="flex" data-animate="" data-brx="block">
+          <h2 class="w-heading-xl" builder-data-element="heading"><span class="w-highlight">Agent-Ready</span> Hosting</h2>
+          <p class="w-text-m" builder-data-element="text">Easily connect PXpace with your AI agents and <span class="w-mark">MCP</span> clients in minutes.</p>
+        </header>
+        <div class="w-agents__showcase" builder-data-element="div" data-brx="div">
+          <div class="w-agents__copy" builder-data-element="flex" data-brx="block">
+            <h3 class="w-heading-m" builder-data-element="heading">
+              Works With the{' '}
+              <span class="w-highlight" builder-data-element="span">Agents You Already Use</span>
+            </h3>
+            <p class="w-agents__lede" builder-data-element="text">Every agent has its own setup page: the exact command, how sign-in works and the first thing to ask.</p>
+            <ButtonText link="#" label="See all agents →" showIcon={false} />
+          </div>
+          <ul class="w-agents__tiles" builder-data-element="list">
+            <TileAgent logo="https://xcloud.host/_landing/agent/logos-mono/claude-code.svg" label="Claude Code" />
+            <TileAgent logo="https://xcloud.host/_landing/agent/logos-mono/codex.svg" label="Codex" />
+            <TileAgent logo="https://xcloud.host/_landing/agent/logos-mono/chatgpt.svg" label="ChatGPT" />
+            <TileAgent logo="https://xcloud.host/_landing/agent/logos-mono/cursor.svg" label="Cursor" />
+            <TileAgent logo="https://xcloud.host/_landing/agent/logos-mono/gemini-cli.svg" label="Gemini CLI" />
+            <TileAgent logo="https://xcloud.host/_landing/agent/logos-mono/grok.svg" label="Grok" />
+            <TileAgent logo="https://xcloud.host/_landing/agent/logos-mono/openclaw.svg" label="OpenClaw" />
+            <TileAgent logo="https://xcloud.host/_landing/agent/logos-mono/hermes-agent.svg" label="Hermes Agent" />
+            <TileAgent logo="https://xcloud.host/_landing/agent/logos-mono/opencode.svg" label="OpenCode" />
+          </ul>
+        </div>
+        <ul class="w-agents__ways" builder-data-element="list">
+          <CardWay text={"<strong class=\"w-card-way__lead\">MCP server.</strong> <span class=\"w-badge\">Recommended</span> Connect PXpace to Claude, ChatGPT, Cursor or any MCP client with one URL. Sign in through your browser, no token to paste."} label="Learn about PXpace MCP" />
+          <CardWay text={"<strong class=\"w-card-way__lead\">Agent Skills.</strong> Nine ready-made skills your agent picks on its own. Install once, then ask in plain language."} label="See Agent Skills" />
+          <CardWay text={"<strong class=\"w-card-way__lead\">Public API.</strong> Everything above runs on the PXpace Public API, if you would rather integrate directly."} label="View the API" />
+        </ul>
+      </div>
+    </section>
+    <section class="w-git-deploy" builder-data-element="section" data-surface="default" data-brx="section">
+      <div class="w-git-deploy__container" builder-data-element="container" data-brx="container">
+        <div class="w-git-deploy__text" builder-data-element="flex" data-brx="block">
+          <div class="w-git-deploy__head" builder-data-element="flex" data-brx="block">
+            <p class="w-overline" builder-data-element="text">Deploy from Git</p>
+            <h2 class="w-heading-m" builder-data-element="heading">Deploy Anything, Without the Complexity</h2>
+          </div>
+          <div class="w-git-deploy__body" builder-data-element="flex" data-brx="block">
+            <p class="w-text-l" builder-data-element="text">Paste a repository URL and PXpace works out the rest: your stack, your branch, the deploy script, your domain and free SSL. Live in under a minute, with no pipelines to write and no new tools to learn.</p>
+            <ul class="w-git-deploy__points" builder-data-element="list">
+              <li class="w-git-deploy__point" builder-data-element="text"><svg aria-hidden="true" class="w-git-deploy__check" viewBox="0 0 20 20"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path></svg>Stack, branch and deploy script worked out for you</li>
+              <li class="w-git-deploy__point" builder-data-element="text"><svg aria-hidden="true" class="w-git-deploy__check" viewBox="0 0 20 20"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path></svg>Zero-downtime releases, with one-click rollback</li>
+              <li class="w-git-deploy__point" builder-data-element="text"><svg aria-hidden="true" class="w-git-deploy__check" viewBox="0 0 20 20"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path></svg>WordPress, Laravel, Node.js and more, on every plan</li>
+            </ul>
+            <ButtonSecondary link="#" label="See how it works" />
+          </div>
+        </div>
+        <div class="w-git-deploy__visual" builder-data-element="div" data-brx="div">
+          <img class="w-git-deploy__background" builder-data-element="image" alt="" src="https://xcloud.host/_landing/ship-via-git/shipgit-bg.png" />
+          <GlyphMatrix />
+          <img class="w-git-deploy__illustration" builder-data-element="image" alt="Deploy from Git screen" src="https://xcloud.host/_landing/ship-via-git/shipgit-illustration.png" />
+          <div class="w-git-deploy__fade" builder-data-element="div" data-brx="div"></div>
+        </div>
+      </div>
+    </section>
+    <section class="w-ai-assistant" builder-data-element="section" data-surface="default" data-brx="section">
+      <div class="w-ai-assistant__container" builder-data-element="container" data-brx="container">
+        <div class="w-ai-assistant__band" builder-data-element="div" data-animate="" data-brx="div">
+          <img class="w-ai-assistant__background" builder-data-element="image" alt="" src="https://xcloud.host/_landing/ai-assistant/ai-assistant-bg.png" />
+          <img class="w-ai-assistant__dashboard" builder-data-element="image" alt="" src="https://xcloud.host/_landing/ai-assistant/ai-assistant-dashboard.png" />
+          <img class="w-ai-assistant__chat" builder-data-element="image" alt="" src="https://xcloud.host/_landing/ai-assistant/ai-assistant-chatbot.png" />
+          <div class="w-ai-assistant__content" builder-data-element="flex" data-brx="block">
+            <BadgePill label="New" />
+            <h2 class="w-heading-l" builder-data-element="heading">PXpace AI Assistant: Manage Smartly, Grow Confidently</h2>
+            <p class="w-text-l" builder-data-element="text">PXpace takes the stress out of managing your server and site operations with instant help and proactive support, so you stay focused on growth, not upkeep.</p>
+            <ButtonSecondary link="#" label="Learn More" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="w-performance" builder-data-element="section" data-surface="base" data-brx="section">
+      <div class="w-performance__container" builder-data-element="container" data-brx="container">
+        <div class="w-performance__inner" builder-data-element="flex" data-animate="" data-brx="block">
+          <header class="w-performance__head" builder-data-element="flex" data-brx="block">
+            <h2 class="w-heading-l" builder-data-element="heading">
+              Faster Performance,{' '}
+              <span class="w-dim" builder-data-element="span">Stronger Security, Fully Managed</span>
+            </h2>
+            <p class="w-performance__intro" builder-data-element="text">Save time and money with a managed cloud hosting platform that delivers high performance and value to power your projects and scale with trust, security, and compliance Without Compromise.</p>
+          </header>
+          <div class="w-performance__row" builder-data-element="flex" data-brx="block">
+            <div class="w-performance__accordion" builder-data-element="flex" data-accordion="" data-brx="block">
+              <AccordionItem accordionImage="https://xcloud.host/_landing/performance/performance-enterprise.png" triggerAriaExpanded="false" title="Enterprise-Grade Security" text="Automated security patching, firewalls and isolation keep every site protected." list={"<li class=\"w-accordion-item__list-item\">High-frequency CPUs</li><li class=\"w-accordion-item__list-item\">NVMe SSD storage</li><li class=\"w-accordion-item__list-item\">Global data centers</li><li class=\"w-accordion-item__list-item\">Optimized server stacks</li><li class=\"w-accordion-item__list-item\">Intelligent caching</li>"} showList={false} />
+              <AccordionItem accordionImage="https://xcloud.host/_landing/performance/performance-Infrastructure.png" variant="is-open" triggerAriaExpanded="true" title="High-Performance Infrastructure" text="Slow websites lose visitors. Our high-performance SSD storage delivers fast load times and smooth performance, even during traffic spikes." list={"<li class=\"w-accordion-item__list-item\">High-frequency CPUs</li><li class=\"w-accordion-item__list-item\">NVMe SSD storage</li><li class=\"w-accordion-item__list-item\">Global data centers</li><li class=\"w-accordion-item__list-item\">Optimized server stacks</li><li class=\"w-accordion-item__list-item\">Intelligent caching</li>"} showList />
+              <AccordionItem accordionImage="https://xcloud.host/_landing/performance/performance-reliability.png" triggerAriaExpanded="false" title="Reliability At Half The Cost" text="Enterprise reliability without the enterprise invoice." list={"<li class=\"w-accordion-item__list-item\">High-frequency CPUs</li><li class=\"w-accordion-item__list-item\">NVMe SSD storage</li><li class=\"w-accordion-item__list-item\">Global data centers</li><li class=\"w-accordion-item__list-item\">Optimized server stacks</li><li class=\"w-accordion-item__list-item\">Intelligent caching</li>"} showList={false} />
+            </div>
+            <div class="w-performance__visual" builder-data-element="div" data-brx="div">
+              <img class="w-performance__image" builder-data-element="image" alt="" data-accordion-target="" src="https://xcloud.host/_landing/performance/performance-Infrastructure.png" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="w-integrations" builder-data-element="section" data-surface="band" data-brx="section">
+      <div class="w-integrations__container" builder-data-element="container" data-brx="container">
+        <div class="w-integrations__constellation" builder-data-element="div" data-brx="div">
+          <div class="w-integrations__row" builder-data-element="div" data-brx="div">
+            <div class="w-integrations__track w-integrations__track--reverse" builder-data-element="div" data-marquee="">
+              <TileIntegration iconAlt="Hetzner" icon="https://xcloud.host/_landing/integrations/hetzner.svg" />
+              <TileIntegration iconAlt="Google Cloud" icon="https://xcloud.host/_landing/integrations/google-cloud.svg" />
+              <TileIntegration iconAlt="AWS" icon="https://xcloud.host/_landing/integrations/aws.svg" />
+              <TileIntegration iconAlt="Linode" icon="https://xcloud.host/_landing/integrations/linode.svg" />
+              <TileIntegration iconAlt="Hostinger" icon="https://xcloud.host/_landing/integrations/hostinger.svg" />
+              <TileIntegration iconAlt="Vultr" icon="https://xcloud.host/_landing/integrations/vultr.svg" />
+              <TileIntegration iconAlt="DigitalOcean" icon="https://xcloud.host/_landing/integrations/digital-ocean.svg" />
+            </div>
+          </div>
+          <div class="w-integrations__row" builder-data-element="div" data-brx="div">
+            <div class="w-integrations__track" builder-data-element="div" data-marquee="">
+              <TileIntegration iconAlt="Terminal" icon="https://xcloud.host/_landing/integrations/terminal.svg" />
+              <TileIntegration iconAlt="Cloudflare" icon="https://xcloud.host/_landing/integrations/cloudflare.svg" />
+              <TileIntegration iconAlt="SendGrid" icon="https://xcloud.host/_landing/integrations/sendgrid.svg" />
+              <TileIntegration iconAlt="Mailgun" icon="https://xcloud.host/_landing/integrations/mailgun.svg" />
+              <TileIntegration iconAlt="Wasabi" icon="https://xcloud.host/_landing/integrations/wasabi.svg" />
+              <TileIntegration iconAlt="Google Drive" icon="https://xcloud.host/_landing/integrations/google-drive.svg" />
+              <TileIntegration iconAlt="Backblaze" icon="https://xcloud.host/_landing/integrations/backblaze.svg" />
+            </div>
+          </div>
+          <div class="w-integrations__row" builder-data-element="div" data-brx="div">
+            <div class="w-integrations__track w-integrations__track--reverse" builder-data-element="div" data-marquee="">
+              <TileIntegration iconAlt="Slack" icon="https://xcloud.host/_landing/integrations/slack.svg" />
+              <TileIntegration iconAlt="WhatsApp" icon="https://xcloud.host/_landing/integrations/whatsapp.svg" />
+              <TileIntegration iconAlt="Telegram" icon="https://xcloud.host/_landing/integrations/telegram.svg" />
+              <TileIntegration iconAlt="pCloud" icon="https://xcloud.host/_landing/integrations/pcloud.svg" />
+              <TileIntegration iconAlt="Object Cache Pro" icon="https://xcloud.host/_landing/integrations/object-cache-pro.svg" />
+              <TileIntegration iconAlt="Git" icon="https://xcloud.host/_landing/integrations/git.svg" />
+            </div>
+          </div>
+          <div class="w-integrations__center" builder-data-element="div" data-brx="div">
+            <img class="w-integrations__center-logo w-integrations__center-logo--light" builder-data-element="image" alt="PXpace" height="32" src="/brand/short-logo.svg" width="64" />
+            <img class="w-integrations__center-logo w-integrations__center-logo--dark" builder-data-element="image" alt="PXpace" height="32" src="/brand/short-logo-white.svg" width="64" />
+          </div>
+        </div>
+        <div class="w-integrations__content" builder-data-element="flex" data-animate="" data-brx="block">
+          <h2 class="w-heading-xl" builder-data-element="heading">Built-in Integrations to Maximize Performance</h2>
+          <p class="w-text-l" builder-data-element="text">Connect your email, DNS, and storage providers in just a few clicks, with powerful built-in integrations you manage all from one place.</p>
+        </div>
+      </div>
+    </section>
+    <section class="w-testimonials" builder-data-element="section" data-surface="default" data-brx="section">
+      <div class="w-testimonials__container" builder-data-element="container" data-brx="container">
+        <header class="w-testimonials__head" builder-data-element="flex" data-animate="" data-brx="block">
+          <h2 class="w-heading-xl" builder-data-element="heading">Hear what <span class="w-highlight">people are saying</span> about us</h2>
+          <p class="w-text-m" builder-data-element="text">See why agencies, developers, startups, and growing businesses choose PXpace to power their projects.</p>
+        </header>
+        <div class="w-testimonials__wall" builder-data-element="div" data-brx="div">
+          <div class="w-testimonials__column" builder-data-element="div" data-brx="div">
+            <div class="w-testimonials__track" builder-data-element="div" data-marquee="vertical">
+              <CardTestimonial quote="I've tried many paid platforms and the platform that works best for WordPress is SpinupWP and I believe that PXpace can reach and surpass that development, its roadmap is promising.
+
+Congratulations to the PXpace team, I hope they become the leading platform in the segment." avatar="https://xcloud.host/_landing/testimonials/brian.webp" name="Brian Geovanny" />
+              <CardTestimonial quote="I've been with runcloud for the last 3 years. However, after trying PXpace for the last month, I'm switching over. They are on a roll with their setup." avatar="https://xcloud.host/_landing/testimonials/pineda.webp" name="Kevin Pineda" />
+              <CardTestimonial quote="There are no team mates nor API limits with PXpace!
+
+#PXpace #wordpress #hosting" avatar="https://xcloud.host/_landing/testimonials/leo.webp" name="Leo Koo" />
+              <CardTestimonial quote="How Cloud Nine Web Elevated Client Experience While Streamlining Hosting Operations using PXpace" avatar="https://xcloud.host/_landing/testimonials/ed.webp" name="Ed Ellingham" />
+            </div>
+          </div>
+          <div class="w-testimonials__column w-testimonials__column--middle" builder-data-element="div" data-brx="div">
+            <div class="w-testimonials__track w-testimonials__track--reverse" builder-data-element="div" data-marquee="vertical">
+              <CardTestimonial quote="So far my experience has been smooth like silk. I didn't imagine that configuring and managing a VPS would be so easy. As of today, I have deployed 8 sites.
+
+I'm sure that within a few months, PXpace will become the leader in its segment." avatar="https://xcloud.host/_landing/testimonials/massimo.webp" name="Massimo Villa" />
+              <CardTestimonial quote="Came from cloudways then to runcloud then to PXpace. Looks like I'm staying here." avatar="https://xcloud.host/_landing/testimonials/gerson.webp" name="Gerson El" />
+              <CardTestimonial quote="I've recently taken all of my Vultr-hosted sites and gotten rid of cPanel for them to substitute it with PXpace.
+
+I have to say, I'm really impressed with PXpace so far!" avatar="https://xcloud.host/_landing/testimonials/tony.webp" name="Tony Lewis" />
+              <CardTestimonial quote="I came from Cloudways and won't go back. Highly impressed with PXpace. Glad I gave them a chance." avatar="https://xcloud.host/_landing/testimonials/dan.webp" name="Dan Spinoza" />
+            </div>
+          </div>
+          <div class="w-testimonials__column w-testimonials__column--last" builder-data-element="div" data-brx="div">
+            <div class="w-testimonials__track w-testimonials__track--slow" builder-data-element="div" data-marquee="vertical">
+              <CardTestimonial quote="Successful migrated 5 sites on a single server. PXpace migration tool worked great." avatar="https://xcloud.host/_landing/testimonials/rahil.webp" name="Rahil Maknojia" />
+              <CardTestimonial quote="Came from runcloud. Tried PXpace and never came back." avatar="https://xcloud.host/_landing/testimonials/fanega.webp" name="Karl Fanega" />
+              <CardTestimonial quote="How Advanced Web Strategies Saved Over $2,000 & Recovered 56 Hours per Month Managing 70+ Client Websites" avatar="https://xcloud.host/_landing/testimonials/gary.webp" name="Gary Moody" />
+              <CardTestimonial quote="PXpace gave me what no other hosting platform could: the flexibility of a VPS with the convenience of managed WordPress." avatar="https://xcloud.host/_landing/testimonials/jorge.webp" name="Jorge de los Reyes Martínez" />
+              <CardTestimonial quote="I use Server Avatar and PXpace and I'll sooner use PXpace than Server Avatar personally." avatar="https://xcloud.host/_landing/testimonials/pagano.webp" name="Jay Pagano" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="w-community" builder-data-element="section" data-surface="band" data-brx="section">
+      <div class="w-community__container" builder-data-element="container" data-brx="container">
+        <header class="w-community__head" builder-data-element="flex" data-animate="" data-brx="block">
+          <h2 class="w-heading-xl" builder-data-element="heading">
+            You May Have Seen Us{' '}
+            <span class="w-highlight" builder-data-element="span">Featured In Many Publications</span>
+          </h2>
+        </header>
+        <div class="w-community__panel" builder-data-element="div" data-brx="div">
+          <CardCommunity eyebrowIcon={"<rect fill=\"none\" height=\"15\" rx=\"2\" stroke=\"currentColor\" stroke-width=\"1.25\" width=\"12\" x=\"4\" y=\"2.5\"></rect><path d=\"M7 7h6M7 10h6M7 13h4\" fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-width=\"1.25\"></path>"} eyebrow="Publication" statement={"<span class=\"w-dim\">PXpace Featured Across</span> Industry-Leading Publications"} label="Explore More" image="https://xcloud.host/_landing/community/press-collage.png" />
+          <CardCommunity eyebrowIcon={"<circle cx=\"10\" cy=\"7\" fill=\"none\" r=\"2.5\" stroke=\"currentColor\" stroke-width=\"1.25\"></circle><circle cx=\"4.5\" cy=\"8.5\" fill=\"none\" r=\"1.8\" stroke=\"currentColor\" stroke-width=\"1.25\"></circle><circle cx=\"15.5\" cy=\"8.5\" fill=\"none\" r=\"1.8\" stroke=\"currentColor\" stroke-width=\"1.25\"></circle><path d=\"M5.5 15.5a4.5 4.5 0 0 1 9 0M1.5 14.5a3 3 0 0 1 4-2.6M18.5 14.5a3 3 0 0 0-4-2.6\" fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-width=\"1.25\"></path>"} eyebrow="Community" statement={"Join Our Global Community <span class=\"w-dim\">of Hosting Enthusiasts</span>"} label="Join Now" image="https://xcloud.host/_landing/community/join-community.png" />
+        </div>
+      </div>
+    </section>
+  </MainLayout>
+  <script is:inline src="/scripts/snippets/snip-pxpace-site-behaviour.js"></script>
+</Base>

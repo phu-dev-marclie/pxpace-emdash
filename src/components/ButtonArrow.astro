@@ -1,0 +1,17 @@
+---
+interface Props {
+  link?: string;
+  label?: string;
+}
+const { link = "#", label = "Start free trial" } = Astro.props;
+---
+<a class="w-button-arrow" builder-data-element="link" href={link}>
+  <span class="w-button-arrow__labels" builder-data-element="span">
+    <span class="w-button-arrow__label" builder-data-element="span">{label}</span>
+    <span class="w-button-arrow__label-next" builder-data-element="span" aria-hidden="true">{label}</span>
+  </span>
+  <span class="w-button-arrow__disc" builder-data-element="span" aria-hidden="true">
+    <svg class="w-button-arrow__icon" builder-data-element="svg" viewBox="0 0 24 24"><path d="M4 12h16M13 5l7 7-7 7" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+    <svg class="w-button-arrow__icon-next" builder-data-element="svg" viewBox="0 0 24 24"><path d="M4 12h16M13 5l7 7-7 7" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+  </span>
+</a>

@@ -1,0 +1,38 @@
+---
+interface Props {
+  label?: string;
+}
+const { label = "Server size" } = Astro.props;
+---
+<fieldset class="w-form-field w-form-field--wide">
+  <legend class="w-form-field__label w-form-field__label--legend">
+    <span class="w-form-field__label-text" builder-data-element="span">{label}</span>
+    <span class="w-form-field__required" builder-data-element="span" aria-hidden="true">*</span>
+  </legend>
+  <div class="w-form-field__options" builder-data-element="div">
+    <label class="w-choice" builder-data-element="form-label">
+      <input class="w-choice__radio" builder-data-element="form-check-input" checked="" name="size" required="" type="radio" value="starter" />
+      <span class="w-choice__body" builder-data-element="span">
+        <span class="w-choice__title" builder-data-element="span">Starter</span>
+        <span class="w-choice__meta" builder-data-element="span">1 vCPU · 2 GB · 50 GB NVMe</span>
+      </span>
+      <span class="w-choice__price" builder-data-element="span">$6/mo</span>
+    </label>
+    <label class="w-choice" builder-data-element="form-label">
+      <input class="w-choice__radio" builder-data-element="form-check-input" name="size" type="radio" value="growth" />
+      <span class="w-choice__body" builder-data-element="span">
+        <span class="w-choice__title" builder-data-element="span">Growth</span>
+        <span class="w-choice__meta" builder-data-element="span">2 vCPU · 4 GB · 80 GB NVMe</span>
+      </span>
+      <span class="w-choice__price" builder-data-element="span">$12/mo</span>
+    </label>
+    <label class="w-choice" builder-data-element="form-label">
+      <input class="w-choice__radio" builder-data-element="form-check-input" name="size" type="radio" value="scale" />
+      <span class="w-choice__body" builder-data-element="span">
+        <span class="w-choice__title" builder-data-element="span">Scale</span>
+        <span class="w-choice__meta" builder-data-element="span">4 vCPU · 8 GB · 160 GB NVMe</span>
+      </span>
+      <span class="w-choice__price" builder-data-element="span">$24/mo</span>
+    </label>
+  </div>
+</fieldset>

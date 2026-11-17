@@ -1,0 +1,19 @@
+---
+interface Props {
+  label?: string;
+}
+const { label = "Notes for the migration team" } = Astro.props;
+---
+<div class="w-form-field w-form-field--wide" builder-data-element="div">
+  <label class="w-form-field__label" builder-data-element="form-label" for="f-notes">
+    <span class="w-form-field__label-text" builder-data-element="span">{label}</span>
+    <span class="w-form-field__optional" builder-data-element="span">(optional)</span>
+  </label>
+  <div class="w-input w-input--textarea" builder-data-element="div">
+    <textarea class="w-input__field" builder-data-element="form-textarea" aria-describedby="f-notes-hint" data-autogrow="" id="f-notes" maxlength="160" name="notes" placeholder="Staging URL, plugins that need care, a good time to switch DNS…" rows="3"></textarea>
+  </div>
+  <div class="w-form-field__footer" builder-data-element="div">
+    <p class="w-form-field__hint" builder-data-element="text" id="f-notes-hint">Grows as you type.</p>
+    <span class="w-form-field__counter" builder-data-element="span" data-counter="f-notes">0 / 160</span>
+  </div>
+</div>

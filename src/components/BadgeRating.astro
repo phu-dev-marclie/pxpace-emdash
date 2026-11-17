@@ -1,0 +1,11 @@
+---
+interface Props {
+  link?: string;
+  label?: string;
+}
+const { link = "#", label = "4.8 stars | 428+ 5 Star Reviews" } = Astro.props;
+---
+<a class="w-badge-rating" builder-data-element="link" href={link}>
+  <svg class="w-badge-rating__icon" builder-data-element="svg" aria-hidden="true" viewBox="0 0 12 12"><path d="M6 1l1.545 3.13 3.455.502-2.5 2.436.59 3.432L6 8.887 2.91 10.5l.59-3.432L1 4.632l3.455-.502L6 1z" fill="currentColor"></path></svg>
+  <span class="w-badge-rating__text" builder-data-element="span">{label}</span>
+</a>

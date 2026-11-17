@@ -1,0 +1,14 @@
+---
+import MockWindow from './MockWindow.astro';
+interface Props {
+  content?: string;
+  caption?: string;
+}
+const { content = "\n<div class=\"w-mock__bar\"><span class=\"w-mock__dots\"><span class=\"w-mock__dot\"></span><span class=\"w-mock__dot w-mock__dot--yellow\"></span><span class=\"w-mock__dot w-mock__dot--green\"></span></span><span class=\"w-mock__title\">app.pxpace.com — Create your account</span></div>\n<div class=\"w-mock__row\"><span class=\"w-mock__icon\"></span><span class=\"w-mock__name\">Full name<span class=\"w-mock__meta\">Jane Cooper</span></span></div>\n<div class=\"w-mock__row\"><span class=\"w-mock__icon\"></span><span class=\"w-mock__name\">Email<span class=\"w-mock__meta\">jane@studio.dev</span></span><span class=\"w-pill w-pill--success\">Verified</span></div>\n<div class=\"w-mock__row\"><span class=\"w-mock__icon\"></span><span class=\"w-mock__name\">Password<span class=\"w-mock__meta\">••••••••••••••</span></span><span class=\"w-pill w-pill--success\">Strong</span></div>\n<div class=\"w-mock__row\"><span class=\"w-chip\">Create account</span><span class=\"w-mock__skeleton w-mock__skeleton--long\"></span></div>\n", caption = "Fig. 1 — The sign-up screen" } = Astro.props;
+---
+<figure class="w-docs-figure" builder-data-element="figure">
+  <div class="w-docs-figure__frame" builder-data-element="div">
+    <MockWindow content={content} />
+  </div>
+  <figcaption class="w-docs-figure__caption">{caption}</figcaption>
+</figure>

@@ -1,0 +1,13 @@
+---
+interface Props {
+  link?: string;
+  label?: string;
+}
+const { link = "#", label = "Talk To Us" } = Astro.props;
+---
+<a class="w-button-ghost" builder-data-element="link" href={link}>
+  <span class="w-button-ghost__labels" builder-data-element="span">
+    <span class="w-button-ghost__label" builder-data-element="span">{label}</span>
+    <span class="w-button-ghost__label-next" builder-data-element="span" aria-hidden="true">{label}</span>
+  </span>
+</a>
